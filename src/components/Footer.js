@@ -27,8 +27,8 @@ const Logo = styled.img`
   height: 100px;
   margin-right: calc(var(--pad) * 1.5);
   @media only screen and (max-width: 900px) {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     margin-right: calc(var(--pad) * .5);
   }
 `
@@ -65,7 +65,7 @@ const SubColumns = styled.div`
     margin-bottom: 1rem;
   }
 `
-const Copyright = styled.div`
+const Copyright = styled.p`
   margin-top: 6rem;
   flex: 1;
 `
@@ -99,7 +99,7 @@ export default ({}) => {
         </Col1>
         <Col2 />
         <Col3>
-          <Tagline>Serving the Saint Paul and Minneapolis, <br />MN metro area for over 30 years.</Tagline>
+          <Tagline>Serving the Saint&nbsp;Paul&nbsp;and&nbsp;Minneapolis,<br />MN metro area for over&nbsp;30&nbsp;years.</Tagline>
         </Col3>
       </FlexToBlock>
       <Pad />

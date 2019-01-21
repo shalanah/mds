@@ -8,19 +8,43 @@ import Articles from './Articles'
 const Bg = styled.div`
   background-color: var(--body-bg-alt);
 `
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 900px) {
+    display: block;
+  }
+`
+
 const Heading = styled.h2`
   font-size: 1.5rem;
   color: var(--text-header);
   margin-bottom: calc(var(--pad) * 2);
+  @media only screen and (max-width: 900px) {
+    font-size: 1.3rem;
+    margin-bottom: calc(var(--pad) / 2);
+  }
+`
+const LinkContainer = styled.div`
+  @media only screen and (max-width: 900px) {
+    margin-bottom: calc(var(--pad) * 2);
+  }
 `
 
 const RecentPosts = () => {
   return <Bg>
     <SectionText>
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+      <Header>
         <Heading>Recent Articles</Heading>
-        <Link to={'/articles'} title={'Midway Driving School Articles'}><BtnPrimary as="span">See all articles</BtnPrimary></Link>
-      </div>
+        <LinkContainer>
+          <Link
+            to={'/articles'}
+            title={'Midway Driving School Articles'}>
+            <BtnPrimary as="span">See all articles</BtnPrimary>
+          </Link>
+        </LinkContainer>
+      </Header>
       <StaticQuery
         query={graphql`
           query {
