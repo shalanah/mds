@@ -55,13 +55,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Midway Driving School`,
+        short_name: `MDS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `content/assets/mds-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
