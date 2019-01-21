@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 export const Section = styled.section`
@@ -11,8 +11,22 @@ const SectionWithText = styled.section`
   max-width: 1200px;
   padding: calc(var(--pad) * 4) var(--pad);
   margin: 0 auto;
+  &.smaller {
+    max-width: 880px;
+  }
   @media only screen and (max-width: 800px) {
     padding: calc(var(--pad) * 1.5) var(--pad);
+  }
+`
+export const SectionP = styled.p`
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  @media only screen and (max-width: 800px) {
+    font-weight: 400;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
   }
 `
 const Heading = styled.h1`
