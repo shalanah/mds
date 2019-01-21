@@ -4,11 +4,11 @@ import kebabCase from 'lodash/kebabCase'
 import { Link } from 'gatsby'
 
 const ArticleContainer = styled.div`
-  margin-bottom: 3rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; 
+  justify-content: space-between;
+  margin-bottom: 0; 
   @media only screen and (max-width: 900px) {
     display: block;
   }
@@ -19,9 +19,17 @@ const Preview = styled.article`
   :nth-of-type(3n) {
     padding-right: 0;
   }
+  @media only screen and (min-width: 901px) {
+    .desktop-last-row {
+      margin-bottom: 0
+    }
+  }
   @media only screen and (max-width: 900px) {
     margin-bottom: 2rem;
     width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `
 const Card = styled.div`
@@ -72,6 +80,7 @@ const Tag = styled.div`
 const Articles = ({data}) => {
   const rows = data.allMarkdownRemark.edges.length / 3
   const lastRowStart = (rows - 1) * 3
+  const len = data.allMarkdownRemark.edges.length
   return <ArticleContainer>
     {data.allMarkdownRemark.edges.map(({
       node: {
@@ -80,7 +89,9 @@ const Articles = ({data}) => {
         fields: {slug}
       }
     }, i) => {
-      return <Preview key={i} style={{marginBottom: i >= lastRowStart ? 0 : ''}}>
+      return <Preview
+        key={i}
+        className={i >= lastRowStart ? 'desktop-last-row' : ''}>
         <Card>
           <Title>
             <Link
