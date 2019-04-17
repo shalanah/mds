@@ -38,43 +38,42 @@ const Nav = styled.nav`
     margin-right: 0;
     padding-right: 0;
   }
-`
-const NavLink = styled.a`
-  padding: 9px 0;
-  cursor: pointer;
-  position: relative;
-  color: var(--link-alt); 
-  :after {
-    content: '';
-    transition: .15s;
-    height: 4px;
-    width: 0;
-    background-color: var(--accent);
-    left: 50%;
-    bottom: -3px;
-    transform: translateX(-50%);
-    position: absolute;
+  li a {
+    padding: 9px 0;
+    cursor: pointer;
+    position: relative;
+    color: var(--link-alt); 
+    :after {
+      content: '';
+      transition: .15s;
+      height: 4px;
+      width: 0;
+      background-color: var(--accent);
+      left: 50%;
+      bottom: -3px;
+      transform: translateX(-50%);
+      position: absolute;
+    }
+    :hover:after {
+      width: 100%;
+    }
   }
-  :hover:after {
-    width: 100%;
-  }
-`
-
-const Phone = styled(NavLink)`
-  white-space: no-wrap;
-  color: #fff;
-  transition: .2s;
-  background-color: var(--accent-dark);
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-  :hover {
+  li a.phone {
+    white-space: no-wrap;
     color: #fff;
-    background-color: var(--accent-darker);
-    box-shadow: 0px 1px 5px rgba(0,0,0,.3);
-  }
-  :hover:after {
-    display: none;
+    transition: .2s;
+    background-color: var(--accent-dark);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    :hover {
+      color: #fff;
+      background-color: var(--accent-darker);
+      box-shadow: 0px 1px 5px rgba(0,0,0,.3);
+    }
+    :hover:after {
+      display: none;
+    }
   }
 `
 
@@ -94,23 +93,22 @@ export default ({}) => {
       </LogoContainer>
       <Nav className={"mobile pos-center-vert"}>
         <ul>
-          <li><Phone href="tel:612-623-4142">Call (612) 623-4142</Phone></li>
+          <li><a className='phone' href="tel:612-623-4142">Call (612) 623-4142</a></li>
         </ul>
       </Nav>
       <Nav className={"mobile-none pos-center-vert"}>
         <ul>
           <li>
-            <NavLink href="/#services">Services</NavLink>
+            <Link to="/#services">Services</Link>
           </li>
           <li>
-            <NavLink href="/#locations">Locations, Rates, and Hours</NavLink>
+            <Link to="/#locations">Locations, Rates, and Hours</Link>
           </li>
           <li>
-            <NavLink href="/#faq">FAQ</NavLink>
+            <Link to="/#faq">FAQ</Link>
           </li>
-          {/*<li><a href="/blog">Driving Tips</a></li>*/}
           <li>
-            <Phone href="tel:612-623-4142">Call (612) 623-4142</Phone>
+            <a className='phone' href="tel:612-623-4142">Call (612) 623-4142</a>
           </li>
         </ul>
       </Nav>
