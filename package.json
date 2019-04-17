@@ -58,9 +58,9 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "gh-pages-deploy": {
-    "staticpath": "build",
+    "staticpath": "public",
     "prep": [
-      "build"
+      "public"
     ]
   },
   "scripts": {
