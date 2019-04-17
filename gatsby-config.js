@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/mds",
   siteMetadata: {
     title: `Midway Driving School – ESL/Nervous Adult and Home School Behind the Wheel Driving Lessons Serving the Twin Cities (Saint Paul, Minneapolis), Duluth and Rochester`,
     author: `Midway Driving School`,
