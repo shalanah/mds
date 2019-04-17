@@ -1,15 +1,12 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "mds",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Midway Driving School",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Shalanah Dawson <shalanahfaith@gmail.com>",
   "dependencies": {
     "css-vars-ponyfill": "^1.17.2",
-    "gatsby": "^2.3.6",
+    "gatsby": "^2.3.24",
     "gatsby-cli": "^2.5.4",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-feed": "^2.1.0",
@@ -47,6 +44,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.12.4",
+    "gh-pages-deploy": "^0.5.1",
     "prettier": "^1.16.4"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
@@ -59,6 +57,15 @@
     "type": "git",
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
+  "gh-pages-deploy": {
+    "staticpath": "build",
+    "prep": [
+      "build"
+    ],
+    "post": [
+      "clean-source"
+    ]
+  },
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
@@ -67,6 +74,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "deploy": "gh-pages-deploy -- 'Prod Build'",
+    "clean-source": "rimraf public src README.md yarn.lock package.json package-lock.json .gitignore node_modules build"
   }
 }
