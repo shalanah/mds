@@ -37,6 +37,15 @@ const Modal = styled.div`
   h4 {
     color: #000;
     font-size: 1.3rem;
+    margin-bottom: .5rem;
+  }
+  h5 {
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+  a {
+    color: var(--accent-dark)
   }
   table {
     border-collapse: collapse;
@@ -180,6 +189,7 @@ const LocationModal = ({type, name, onClose}) => {
               </tbody>
             </table>
             <h4>Office hours</h4>
+            <h5>Call <a href="tel:612-623-4142">(612)623-4142</a></h5>
             <table className="hours">
               <tbody>
                 <tr>
