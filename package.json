@@ -61,9 +61,6 @@
     "staticpath": "build",
     "prep": [
       "build"
-    ],
-    "post": [
-      "clean-source"
     ]
   },
   "scripts": {
@@ -75,7 +72,6 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "deploy": "gh-pages-deploy -- 'Prod Build'",
-    "clean-source": "rimraf public src README.md yarn.lock package.json package-lock.json .gitignore node_modules build"
+    "deploy": "gh-pages-deploy -- 'Prod Build'"
   }
 }
