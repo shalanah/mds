@@ -210,7 +210,7 @@ export default () => {
             }
           } name={location} />
         </Transition>
-      </div> , document.body)}
+      </div>, document.body)}
     </SectionText>
   )
 }
