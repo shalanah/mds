@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 
 const ArticleContainer = styled.div`
   display: flex;
@@ -14,6 +14,7 @@ const ArticleContainer = styled.div`
   }
 `
 const Preview = styled.article`
+  cursor: pointer;
   width: calc(33% - var(--pad));
   margin-bottom: calc(var(--pad) * 2);
   :nth-of-type(3n) {
@@ -42,7 +43,7 @@ const Card = styled.div`
     transition: .2s;
     :hover {
       transform: scale(1.01);
-      box-shadow: 0px 20px 150px rgba(0,0,0,.2);
+      box-shadow: 0px 20px 75px rgba(0,0,0,.05);
     }
   }
 `
@@ -57,27 +58,28 @@ const Title = styled.h3`
   }
 `
 const Summary = styled.p`
-  font-size: .95rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 `
 const Tag = styled.div`
   display: inline-block;
-  margin: 0 calc(var(--pad) * .25) calc(var(--pad) * .5) 0;
+  margin: 0 calc(var(--pad) * .25) calc(var(--pad) * .7) 0;
   a {
     display: inline;
-    background-color: var(--text-mute);
+    background-color: var(--accent);
     color: #fff;
     white-space: nowrap;
-    font-size: .7rem;
+    font-size: .8rem;
     border-radius: 3px;
-    padding: .2rem .5rem;
+    padding: .3rem .5rem;
     transition: .2s;
   }
   a:hover {
-    background-color: #444;
+    background-color: #000;
   }
 `
 
-const Articles = ({data}) => {
+const Articles = ({data, history}) => {
   const rows = data.allMarkdownRemark.edges.length / 3
   const lastRowStart = (rows - 1) * 3
   const len = data.allMarkdownRemark.edges.length
@@ -90,6 +92,7 @@ const Articles = ({data}) => {
       }
     }, i) => {
       return <Preview
+        onClick={() => navigate(slug)}
         key={i}
         className={i >= lastRowStart ? 'desktop-last-row' : ''}>
         <Card>

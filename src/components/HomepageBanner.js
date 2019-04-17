@@ -1,12 +1,14 @@
 import React from 'react'
 import {Section} from './Section'
 import styled from 'styled-components'
+import bg from '../assets/midway-driving-school-bg-driver.jpg'
+import Fade from 'react-reveal/Fade'
 
 const Container = styled.div`
   background-color: #222;
   color: #fff;
   height: calc(100vh - 220px);
-  background-image: url("./assets/MDS-home-hero-1440.jpg");
+  background-image: url("${bg}");
   background-size: cover;
   font-family: Roboto;
   font-weight: 700;
@@ -75,14 +77,15 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 
 export default () => {
   const d = new Date()
+  const month = months[d.getMonth()]
   return <Container>
     <Section style={{position: 'relative', height: '100%'}}>
       <H2>Training designed for nervous&nbsp;adults</H2>
       <Down href="#services" />
       <Discount>
         <h3>Special Discount!</h3>
-        <p>Mention the <span class="month">month</span> web discount when you call for $25 off a 6 or 7&#189; hour package!</p>
-        <p>{`Valid through the month of ${months[d.getMonth()]} only.`}</p>
+        <p>{`Mention the ${month} web discount when you call for $25 off a 6 or 7½ hour package!`}</p>
+        <p>{`Valid through the month of ${month} only.`}</p>
       </Discount>
     </Section>
   </Container>

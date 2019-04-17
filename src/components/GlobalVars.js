@@ -14,6 +14,7 @@ export default `
     --footer-color: #fff;
   }
   html {
+    scroll-behavior: smooth;
     background-color: var(--footer-bg);
   }
   body {

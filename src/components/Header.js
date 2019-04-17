@@ -100,13 +100,13 @@ export default ({}) => {
       <Nav className={"mobile-none pos-center-vert"}>
         <ul>
           <li>
-            <NavLink href="/services">Services</NavLink>
+            <NavLink href="/#services">Services</NavLink>
           </li>
           <li>
-            <NavLink href="/locations-rates">Locations, Rates, and Hours</NavLink>
+            <NavLink href="/#locations">Locations, Rates, and Hours</NavLink>
           </li>
           <li>
-            <NavLink href="/faq">FAQ</NavLink>
+            <NavLink href="/#faq">FAQ</NavLink>
           </li>
           {/*<li><a href="/blog">Driving Tips</a></li>*/}
           <li>

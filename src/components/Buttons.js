@@ -13,6 +13,7 @@ export const BtnPrimary = styled.button`
   font-size: 1.125rem;
   font-weight: 700;
   display: inline-block;
+  text-align: center;
   :hover {
     color: #fff;
     background-color: var(--accent-darker);
@@ -21,4 +22,9 @@ export const BtnPrimary = styled.button`
   :hover:after {
     display: none;
   }
+`
+
+export const BtnPrimary2 = styled(BtnPrimary)`
+  padding: 12px 20px 12px 20px;
+  border-radius: 0;
 `

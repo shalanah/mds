@@ -84,11 +84,9 @@ export default ({}) => {
     <Section>
       <FlexToBlock style={{alignItems: 'flex-end'}}>
         <Col1>
-          <Link to={'/'} title={'Midway Driving School Homepage'}>
-            <Logo
-              src={'/brand/footer-logo.png'}
-              alt={'Midway Driving School'} />
-          </Link>
+          <Logo
+            src={'/brand/footer-logo.png'}
+            alt={'Midway Driving School'} />
           <a
             href={'https://dps.mn.gov/Pages/default.aspx'}
             target={'_blank'}>
@@ -99,7 +97,7 @@ export default ({}) => {
         </Col1>
         <Col2 />
         <Col3>
-          <Tagline>Serving the Saint&nbsp;Paul&nbsp;and&nbsp;Minneapolis,<br />MN metro area for over&nbsp;30&nbsp;years.</Tagline>
+          <Tagline>Serving the Saint&nbsp;Paul&nbsp;and&nbsp;Minneapolis,<br />MN metro area for over&nbsp;40&nbsp;years.</Tagline>
         </Col3>
       </FlexToBlock>
       <Pad />
@@ -122,17 +120,6 @@ export default ({}) => {
             <SubColumns as={'li'}>Duluth<br /><a href="tel:218-626-0123">(218) 626-0123</a></SubColumns>
             <SubColumns as={'li'}>Rochester<br /><a href="tel:507-289-3456">(507) 289-3456</a></SubColumns>
           </FlexToBlock>
-          {/* TODO: Don't show email */}
-          <p>Email<br />
-            <Mailto
-              className={'m'}
-              data-n={'midwaydriving1'}
-              data-d={'aol'}
-              data-t={'com'}
-              secure={true}
-              to={['midwaydriving1@aol.com']}
-              subject={'Contact Midway Driving School'} />
-          </p>
           <Pad />
           <FlexToBlock>
             <SubColumns>

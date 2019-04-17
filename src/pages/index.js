@@ -7,6 +7,7 @@ import Locations from '../components/Locations'
 import Faq from '../components/Faq'
 import HomepageBanner from '../components/HomepageBanner'
 import SEO from '../components/seo'
+import ExperienceCallout from '../components/ExperienceCallout'
 
 // WHAT IS A STATIC QUERY??? 
 class Home extends React.Component {
@@ -23,6 +24,7 @@ class Home extends React.Component {
           keywords={keywords} />
         <HomepageBanner />
         <Services />
+        <ExperienceCallout />
         <Locations />
         <Faq />
       </Layout>
