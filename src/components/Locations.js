@@ -160,7 +160,7 @@ export default () => {
             </LocationLink>}) }
         </ul>
       </Columns>
-      {document && document.body && ReactDOM.createPortal(<div>
+      {typeof window !== 'undefined' && ReactDOM.createPortal(<div>
         <Transition
           in={show}
           appear
