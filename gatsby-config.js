@@ -57,7 +57,7 @@ module.exports = {
       options: {
         name: `Midway Driving School`,
         short_name: `MDS`,
-        start_url: `/`,
+        start_url: `https://shalanah.github.io/mds/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,

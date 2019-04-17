@@ -46,16 +46,11 @@
     "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
