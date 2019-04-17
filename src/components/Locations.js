@@ -117,6 +117,7 @@ export default () => {
   const [{show, location, type}, setShowModal] = useState(init)
   const escModal = (e) => {
     if (e.key === "Escape" || e.key === "Esc" || e.keyCode === 27) {
+      document.body.style.overflow = ''
       setShowModal(init)
     }
   }
@@ -149,7 +150,11 @@ export default () => {
         <ul>
           {places.map(({name, type}, i) => {
             return <LocationLink
-              onClick={() => setShowModal({show: true, location: name, type})}
+              onClick={() => {
+                setShowModal({show: true, location: name, type})
+                document.body.style.overflow = 'hidden' // stops double scrollbars
+                }
+              }
               key={i}>
               {name}
             </LocationLink>}) }
@@ -174,7 +179,10 @@ export default () => {
               }
             }
           )}}>
-          <Overlay onClick={() => setShowModal(init)} />
+          <Overlay onClick={() => {
+            setShowModal(init)
+            document.body.style.overflow = ''
+          }} />
         </Transition>
         <Transition
           in={show}
@@ -196,7 +204,11 @@ export default () => {
                 }
               }
             )}}>
-          <LocationModal type={type} onClose={() => setShowModal(init)} name={location} />
+          <LocationModal type={type} onClose={() => {
+            setShowModal(init)
+            document.body.style.overflow = ''
+            }
+          } name={location} />
         </Transition>
       </div> , document.body)}
     </SectionText>
