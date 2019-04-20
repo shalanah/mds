@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://shalanah.github.io/mds/`
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

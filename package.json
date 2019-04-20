@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Shalanah Dawson <shalanahfaith@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "css-vars-ponyfill": "^1.17.2",
     "gatsby": "^2.3.24",
     "gatsby-cli": "^2.5.4",
@@ -16,6 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-sitemap": "^2.0.11",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typography": "^2.2.10",
     "gatsby-remark-copy-linked-files": "^2.0.11",
     "gatsby-remark-images": "^2.0.4",
