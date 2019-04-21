@@ -1,5 +1,5 @@
 export default `
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
   :root {
     --body-bg: #fff;
     --body-bg-alt: #F5F5F5;
