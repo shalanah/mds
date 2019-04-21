@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import {Section} from './Section'
 import Mailto from 'react-mailto.js'
 import { Link } from 'gatsby'
+import mndps from '../assets/Minnesota_Department_of_Public_Safety_Logo.png'
+import logo from '../assets/midway-driving-school-logo-footer.png'
 
 const Container = styled.footer`
   background-color: var(--footer-bg);
@@ -85,13 +87,13 @@ export default ({}) => {
       <FlexToBlock style={{alignItems: 'flex-end'}}>
         <Col1>
           <Logo
-            src={'/brand/footer-logo.png'}
+            src={logo}
             alt={'Midway Driving School'} />
           <a
             href={'https://dps.mn.gov/Pages/default.aspx'}
             target={'_blank'}>
             <Logo
-              src={'/brand/mndot.png'}
+              src={mndps}
               alt={'Minnesota Department of Transportation'} />
           </a>
         </Col1>

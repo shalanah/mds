@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Section} from './Section'
 import {Link} from 'gatsby'
+import logo from '../assets/midway-driving-school-logo.png'
 
 const Container = styled(Section)`
   height: 190px;
@@ -87,7 +88,7 @@ export default ({}) => {
           title={'Midway Driving School Homepage'}>
           <img
             className={'pos-full'}
-            src={'/brand/midway-driving-school-logo.png'}
+            src={logo}
             alt={'Midway Driving School'} />
         </Link>
       </LogoContainer>
