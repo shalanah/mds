@@ -2,7 +2,6 @@ import React from 'react'
 import {Section} from './Section'
 import styled from 'styled-components'
 import bg from '../assets/midway-driving-school-bg-driver.jpg'
-import Fade from 'react-reveal/Fade'
 
 const Container = styled.div`
   background-color: #222;
@@ -28,6 +27,9 @@ const H2 = styled.h2`
   font-size: 3.75rem;
   @media only screen and (max-width: 900px) {
     font-size: 2rem;
+  }
+  @media only screen and (max-height: 500px) {
+    font-size: 2.5rem;
   }
 `
 const Down = styled.a`
@@ -69,6 +71,9 @@ const Discount = styled.div`
     }
   }
   @media only screen and (max-width: 900px) {
+    display: none;
+  }
+  @media only screen and (max-height: 500px) {
     display: none;
   }
 `

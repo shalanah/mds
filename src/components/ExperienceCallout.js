@@ -6,7 +6,7 @@ import {BtnPrimary2} from './Buttons'
 
 const Image = styled.div`
   height: 90vh;
-  width: 105vh;
+  width: 80%;
   background-image: url(${img});
   background-size: cover;
   background-position: 50% 45%;
@@ -18,11 +18,6 @@ const Image = styled.div`
 `
 const Bg = styled.div`
   background: #f5f5f5;
-  @media screen and (orientation: portrait) {
-    /* background-size: cover;
-    background-position: 50% 95%;
-    background-image: url(${img}); */
-  }
 `
 const Container = styled(Section)`
   padding: calc(var(--pad) * 5) 0px;
@@ -46,7 +41,7 @@ const TextBox = styled.div`
   left: 0;
   background-color: #fff;
   height: 50vh;
-  width: 40vh;
+  width: 30%;
   padding: calc(var(--pad) * 2);
   color: #000;
   font-weight: 500;
@@ -57,6 +52,10 @@ const TextBox = styled.div`
     height: auto;
     display: inline-block;
     position: relative;
+  }
+  @media only screen and (max-height: 600px) {
+    font-size: 1rem;
+    height: auto;
   }
 `
 const TextBoxInner = styled.div`
@@ -70,6 +69,10 @@ const Btn = styled(BtnPrimary2)`
   left: 0;
   bottom: 0;
   @media screen and (orientation: portrait) {
+    position: relative;
+    margin-top: 2vh;
+  }
+  @media only screen and (max-height: 600px) {
     position: relative;
     margin-top: 2vh;
   }

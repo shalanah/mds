@@ -32,10 +32,18 @@ const ServiceItem = styled.li`
   @media only screen and (max-width: 800px) {
     width: 48%;
     margin-right: 2%;
+    .text {
+      width: 80%;
+      margin-left: 10%;
+    }
   }
   @media only screen and (max-width: 600px) {
     width: 100%;
     margin-right: 0;
+    .text {
+      width: 70%;
+      margin-left: 15%;
+    }
   }
 `
 
@@ -63,7 +71,7 @@ export default () => {
             delay={i * 100}>
             <div>
               <ServiceImg src={icon} />
-              <div>{text}</div>
+              <div className={'text'}>{text}</div>
             </div>
           </Fade>
         </ServiceItem>
