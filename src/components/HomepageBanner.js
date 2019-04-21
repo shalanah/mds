@@ -70,7 +70,7 @@ const Discount = styled.div`
       color: #626466;
     }
   }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 700px) {
     display: none;
   }
   @media only screen and (max-height: 500px) {
