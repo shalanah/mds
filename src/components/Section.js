@@ -3,19 +3,19 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   max-width: 1200px;
-  padding: var(--pad);
+  padding: ${props => props.theme.pad};
   margin: 0 auto;
 `
 
 const SectionWithText = styled.section`
   max-width: 1200px;
-  padding: calc(var(--pad) * 4) var(--pad);
+  padding: calc(${props => props.theme.pad} * 4) ${props => props.theme.pad};
   margin: 0 auto;
   &.smaller {
     max-width: 880px;
   }
   @media only screen and (max-width: 800px) {
-    padding: calc(var(--pad) * 1.5) var(--pad);
+    padding: calc(${props => props.theme.pad} * 1.5) ${props => props.theme.pad};
   }
 `
 export const SectionP = styled.p`
@@ -33,8 +33,8 @@ const Heading = styled.h1`
   font-size: 48px;
   padding-bottom: 5px;
   display: inline-block;
-  color: var(--text-header);
-  border-bottom: 8px solid var(--accent);
+  color: ${props => props.theme.textHeader};
+  border-bottom: 8px solid ${props => props.theme.accent};
   margin-bottom: 50px;
   @media only screen and (max-width: 800px) {
     font-size: 2rem;

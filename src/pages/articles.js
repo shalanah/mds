@@ -2,9 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Articles from '../components/Articles'
 import {SectionText} from '../components/Section'
-
+import styled from 'styled-components'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+
+const Bg = styled.div`
+  background: linear-gradient(${props => props.theme.bodyBgAlt}, ${props => props.theme.bodyBg});
+`
 
 class Blog extends React.Component {
   render() {
@@ -15,11 +19,11 @@ class Blog extends React.Component {
         <SEO
           title={title}
           keywords={keywords} />
-          <div style={{background: 'linear-gradient(var(--body-bg-alt), var(--body-bg))'}}>
+          <Bg>
             <SectionText heading={'Articles'}>
               <Articles data={this.props.data} />
             </SectionText>
-          </div>
+          </Bg>
       </Layout>
     )
   }

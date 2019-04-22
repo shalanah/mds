@@ -20,7 +20,7 @@ const Bg = styled.div`
   background: #f5f5f5;
 `
 const Container = styled(Section)`
-  padding: calc(var(--pad) * 5) 0px;
+  padding: calc(${props => props.theme.pad} * 5) 0px;
   position: relative;
   @media screen and (orientation: portrait) {
     padding: 0;
@@ -42,7 +42,7 @@ const TextBox = styled.div`
   background-color: #fff;
   height: 50vh;
   width: 30%;
-  padding: calc(var(--pad) * 2);
+  padding: calc(${props => props.theme.pad} * 2);
   color: #000;
   font-weight: 500;
   line-height: 1.4;

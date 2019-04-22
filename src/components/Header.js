@@ -43,13 +43,13 @@ const Nav = styled.nav`
     padding: 9px 0;
     cursor: pointer;
     position: relative;
-    color: var(--link-alt); 
+    color: ${props => props.theme.linkAlt}; 
     :after {
       content: '';
       transition: .15s;
       height: 4px;
       width: 0;
-      background-color: var(--accent);
+      background-color: ${props => props.theme.accent};
       left: 50%;
       bottom: -3px;
       transform: translateX(-50%);
@@ -63,13 +63,13 @@ const Nav = styled.nav`
     white-space: no-wrap;
     color: #fff;
     transition: .2s;
-    background-color: var(--accent-dark);
+    background-color: ${props => props.theme.accentDark};
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 5px;
     :hover {
       color: #fff;
-      background-color: var(--accent-darker);
+      background-color: ${props => props.theme.accentDarker};
       box-shadow: 0px 1px 5px rgba(0,0,0,.3);
     }
     :hover:after {

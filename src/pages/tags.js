@@ -5,6 +5,11 @@ import SEO from '../components/seo'
 import {SectionText} from '../components/Section'
 import kebabCase from 'lodash/kebabCase'
 import {BtnPrimary} from '../components/Buttons'
+import styled from 'styled-components'
+
+const Bg = styled.div`
+  background: linear-gradient(${props => props.theme.bodyBgAlt}, ${props => props.theme.bodyBg});
+`
 
 class Tags extends React.Component {
   render () {
@@ -16,19 +21,19 @@ class Tags extends React.Component {
         <SEO
           title={title}
           keywords={keywords} />
-          <div style={{background: 'linear-gradient(var(--body-bg-alt), var(--body-bg))'}}>
-            <SectionText heading={'Tags'}>
-              <div>
-              {this.props.data.allMarkdownRemark.group.map((tag, i) => (
-                <span style={{margin: '.2rem .2rem', display: 'inline-block'}}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} key={i}>
-                    <BtnPrimary as={'span'}>{tag.fieldValue} ({tag.totalCount})</BtnPrimary>
-                  </Link>
-                </span>
-              ))}
-              </div>
-            </SectionText>
-          </div>            
+        <Bg>
+          <SectionText heading={'Tags'}>
+            <div>
+            {this.props.data.allMarkdownRemark.group.map((tag, i) => (
+              <span style={{margin: '.2rem .2rem', display: 'inline-block'}}>
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} key={i}>
+                  <BtnPrimary as={'span'}>{tag.fieldValue} ({tag.totalCount})</BtnPrimary>
+                </Link>
+              </span>
+            ))}
+            </div>
+          </SectionText>
+        </Bg>            
       </Layout>
     )
   }

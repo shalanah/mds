@@ -15,8 +15,8 @@ const ArticleContainer = styled.div`
 `
 const Preview = styled.article`
   cursor: pointer;
-  width: calc(33% - var(--pad));
-  margin-bottom: calc(var(--pad) * 2);
+  width: calc(33% - ${props => props.theme.pad});
+  margin-bottom: calc(${props => props.theme.pad} * 2);
   :nth-of-type(3n) {
     padding-right: 0;
   }
@@ -38,7 +38,7 @@ const Card = styled.div`
     border: 1px solid rgba(0,0,0,.1);
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    padding: calc(var(--pad) * 2);
+    padding: calc(${props => props.theme.pad} * 2);
     height: 100%;
     transition: .2s;
     :hover {
@@ -49,12 +49,12 @@ const Card = styled.div`
 `
 const Title = styled.h3`
   font-size: 1.25rem;
-  color: var(--text-header);
+  color: ${props => props.theme.textHeader};
   a:link, a:visited, a:hover, a:active {
-    color: var(--text-header);
+    color: ${props => props.theme.textHeader};
   }
   a:hover {
-    color: var(--accent-darker);
+    color: ${props => props.theme.accentDarker};
   }
 `
 const Summary = styled.p`
@@ -63,10 +63,10 @@ const Summary = styled.p`
 `
 const Tag = styled.div`
   display: inline-block;
-  margin: 0 calc(var(--pad) * .25) calc(var(--pad) * .7) 0;
+  margin: 0 calc(${props => props.theme.pad} * .25) calc(${props => props.theme.pad} * .7) 0;
   a {
     display: inline;
-    background-color: var(--accent);
+    background-color: ${props => props.theme.accent};
     color: #fff;
     white-space: nowrap;
     font-size: .8rem;

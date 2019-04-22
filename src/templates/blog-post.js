@@ -13,11 +13,11 @@ const Container = styled.div`
     line-height: 1.2;
   }
   a {
-    color: var(--accent-dark);
+    color: ${props => props.theme.accentDark};
     transition: .2s;
   }
   a:hover {
-    color: var(--accent-darker);
+    color: ${props => props.theme.accentDarker};
     text-decoration: underline;
   }
   h2 {
@@ -48,7 +48,7 @@ const Container = styled.div`
 `
 const H1 = styled.h1`
   font-weight: 700;
-  color: var(--text-header);
+  color: ${props => props.theme.textHeader};
   line-height: 1.1;
   font-size: 3.8rem;
   width: 80%;

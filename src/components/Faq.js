@@ -10,7 +10,7 @@ const Dl = styled.dl`
   border-bottom: 1px solid #000;
   line-height: 1.4;
   a {
-    color: var(--accent-dark);
+    color: ${props => props.theme.accentDark};
     text-decoration: underline;
   }
 `

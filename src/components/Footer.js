@@ -7,8 +7,8 @@ import mndps from '../assets/Minnesota_Department_of_Public_Safety_Logo.png'
 import logo from '../assets/midway-driving-school-logo-footer.png'
 
 const Container = styled.footer`
-  background-color: var(--footer-bg);
-  color: var(--footer-color);
+  background-color: ${props => props.theme.footerBg};
+  color: ${props => props.theme.footerColor};
   /* Declaring links here because <Link> is weird :) */
   a:link, a:visited, a:hover, a:active {
     color: #fff;
@@ -17,7 +17,7 @@ const Container = styled.footer`
     text-decoration: underline;
   }
   a.accent:link, a.accent:visited, a.accent:hover, a.accent:active {
-    color: var(--accent);
+    color: ${props => props.theme.accent};
   }
   /* Used to obscure email name from scrapers */
   .m:after {
@@ -27,15 +27,15 @@ const Container = styled.footer`
 const Logo = styled.img`
   width: 100px;
   height: 100px;
-  margin-right: calc(var(--pad) * 1.5);
+  margin-right: calc(${props => props.theme.pad} * 1.5);
   @media only screen and (max-width: 900px) {
     width: 70px;
     height: 70px;
-    margin-right: calc(var(--pad) * .5);
+    margin-right: calc(${props => props.theme.pad} * .5);
   }
 `
 const Pad = styled.div`
-  padding: var(--pad) 0;
+  padding: ${props => props.theme.pad} 0;
 `
 const FlexToBlock = styled.div`
   display: flex;

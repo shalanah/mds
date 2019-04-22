@@ -1,29 +1,15 @@
-export default `
+const GlobalVars = (theme) => `
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-  :root {
-    --body-bg: #fff;
-    --body-bg-alt: #F5F5F5;
-    --link-alt: #302D2F;
-    --accent: #6DC1FF;
-    --accent-dark: #36a6f7;
-    --accent-darker: #1c8bdb;
-    --text-default: #777;
-    --text-header: #302D2F;
-    --text-mute: #D4D4D4;
-    --pad: 20px;
-    --footer-bg: #302D2F;
-    --footer-color: #fff;
-  }
   html {
     scroll-behavior: smooth;
-    background-color: var(--footer-bg);
+    background-color: ${theme.footerBg};
   }
   body {
-    background-color: var(--body-bg);
+    background-color: ${theme.bodyBg};
   }
   html, body {
     font-family: Roboto;
-    color: var(--text-default);  
+    color: ${theme.textDefault};  
   }
   p, h1, h2, h3, h4, h5, h6, li, ul {
     line-height: 1.35;
@@ -42,3 +28,5 @@ export default `
     pointer: cursor;
   }
 `
+
+export default GlobalVars

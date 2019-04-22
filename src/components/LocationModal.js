@@ -45,7 +45,7 @@ const Modal = styled.div`
     margin-bottom: .5rem;
   }
   a {
-    color: var(--accent-dark)
+    color: ${props => props.theme.accentDark}
   }
   table {
     border-collapse: collapse;

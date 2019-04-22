@@ -11,6 +11,9 @@ const H3 = styled.h3`
   font-size: 1.7rem;
   margin-bottom: 2rem;
 `
+const Bg = styled.div`
+  background: linear-gradient(${props => props.theme.bodyBgAlt}, ${props => props.theme.bodyBg});
+`
 
 class Tags extends React.Component {
   render () {
@@ -29,15 +32,15 @@ class Tags extends React.Component {
         <SEO
           title={title}
           keywords={keywords} />
-          <div style={{background: 'linear-gradient(var(--body-bg-alt), var(--body-bg))'}}>
-            <SectionText heading={'Articles'}>
-              <H3>{tagHeader}</H3>
-              <Articles data={this.props.data} />
-              <Link to="/tags" title={`Midway Driving School - Tags`}>
-                <BtnPrimary as={'span'}>See all tags</BtnPrimary>
-              </Link>
-            </SectionText>
-          </div>            
+        <Bg>
+          <SectionText heading={'Articles'}>
+            <H3>{tagHeader}</H3>
+            <Articles data={this.props.data} />
+            <Link to="/tags" title={`Midway Driving School - Tags`}>
+              <BtnPrimary as={'span'}>See all tags</BtnPrimary>
+            </Link>
+          </SectionText>
+        </Bg>            
       </Layout>
     )
   }

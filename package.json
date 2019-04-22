@@ -6,7 +6,6 @@
   "author": "Shalanah Dawson <shalanahfaith@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "css-vars-ponyfill": "^1.17.2",
     "gatsby": "^2.3.24",
     "gatsby-cli": "^2.5.4",
     "gatsby-image": "^2.0.37",
@@ -49,11 +48,7 @@
     "gh-pages": "^2.0.1",
     "prettier": "^1.16.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",

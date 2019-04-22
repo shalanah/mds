@@ -6,7 +6,7 @@ import { BtnPrimary } from './Buttons'
 import Articles from './Articles'
 
 const Bg = styled.div`
-  background-color: var(--body-bg-alt);
+  background-color: ${props => props.theme.bodyBgAlt};
 `
 
 const Header = styled.header`
@@ -19,16 +19,16 @@ const Header = styled.header`
 
 const Heading = styled.h2`
   font-size: 1.5rem;
-  color: var(--text-header);
-  margin-bottom: calc(var(--pad) * 2);
+  color: ${props => props.theme.textHeader};
+  margin-bottom: calc(${props => props.theme.pad} * 2);
   @media only screen and (max-width: 900px) {
     font-size: 1.3rem;
-    margin-bottom: calc(var(--pad) / 2);
+    margin-bottom: calc(${props => props.theme.pad} / 2);
   }
 `
 const LinkContainer = styled.div`
   @media only screen and (max-width: 900px) {
-    margin-bottom: calc(var(--pad) * 2);
+    margin-bottom: calc(${props => props.theme.pad} * 2);
   }
 `
 
