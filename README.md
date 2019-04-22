@@ -1,9 +1,8 @@
-# Midway Driving School
+# MDS
+- Bootstrapped with Gatsby `my-blog-starter`
+- Development @shalanah
+- Init homepage design mock-ups by @matteveryday
 
-
-
-
-## Developing
-- Built using Gatsby `my-blog-starter`
+## Running
 - Local dev: `yarn install`, `gatsby develop`
 - Publish to gh-pages: `npm run deploy`
