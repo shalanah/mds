@@ -16,7 +16,7 @@ const Dt = styled.dt`
 const Dd = styled.dd`
   font-weight: 300;
   font-size: 1.4rem;
-  padding-right: 60px;
+  padding-right: 20px;
   overflow: hidden;
 `
 const circleLength = 36
