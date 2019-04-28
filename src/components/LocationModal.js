@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const Modal = styled.div`
   position: fixed;
   left: 50%;
@@ -25,18 +24,18 @@ const Modal = styled.div`
     transform: translate3d(0, 0, 0) !important;
   }
   h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
     color: #000;
   }
   h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
     color: #000;
   }
   h4 {
     color: #000;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: .5rem;
   }
   h5 {
@@ -51,7 +50,8 @@ const Modal = styled.div`
     border-collapse: collapse;
     font-weight: 400;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
+    font-size: .9rem !important;
   }
   table.price {
     border-top: 1px solid rgba(0, 0, 0, .1);
@@ -59,19 +59,22 @@ const Modal = styled.div`
   table.price td {
     vertical-align: top;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-    padding: 15px 10px;
+    padding: 10px 7px;
   }
   table.price tr:nth-of-type(even) {
     background-color: #f7f7f7;
   }
   table.hours {
-    font-size: 14px;
+    /* font-size: .9rem; */
   }
   table.hours td {
-    padding: 6px 0px;
+    padding: 4px 0px;
   }
   table.hours td:nth-of-type(even) {
     text-align: right;
+  }
+  .note {
+    line-height: 1.3;
   }
 `
 const Col = styled.div`
@@ -134,21 +137,21 @@ const rates = {
     { elem: '2 Hour Lessons', price: '$165.00' },
     { elem: '6 Hour Behind the Wheel Package', price: '$480.00' },
     {elem: '7½ Hour Package including Road Test', price: '$545.00'},
-    {elem: (<div><p>3&#189; Hour Road Test Appointment*</p>
-      <p className="note">
-        <strong>*Note</strong> Students must take at least one
-        lesson before scheduling a Road Test appointment.
-    </p></div>), price: '$250.00'}
+    {elem: (<div><div style={{marginBottom: '.5rem'}}>3&#189; Hour Road Test Appointment*</div>
+    <div className="note">
+      <strong>*</strong> Students must take at least one
+      lesson before scheduling a Road Test appointment.
+  </div></div>), price: '$250.00'}
   ],
   outter: [
     { elem: '2 Hour Lessons', price: '$175.00' },
     { elem: '6 Hour Behind the Wheel Package', price: '$510.00' },
     {elem: '7½ Hour Package including Road Test', price: '$575.00'},
-    {elem: (<div><p>3&#189; Hour Road Test Appointment*</p>
-      <p className="note">
-        <strong>*Note</strong> Students must take at least one
+    {elem: (<div><div style={{marginBottom: '.5rem'}}>3&#189; Hour Road Test Appointment*</div>
+      <div className="note">
+        <strong>*</strong> Students must take at least one
         lesson before scheduling a Road Test appointment.
-    </p></div>), price: '$260.00'}
+    </div></div>), price: '$260.00'}
   ]
 }
 
@@ -189,7 +192,7 @@ const LocationModal = ({type, name, onClose}) => {
               </tbody>
             </table>
             <h4>Office hours</h4>
-            <h5>Call <a href="tel:612-623-4142">(612)623-4142</a></h5>
+            <h5><a href="tel:612-623-4142">Call (612) 623-4142</a></h5>
             <table className="hours">
               <tbody>
                 <tr>
