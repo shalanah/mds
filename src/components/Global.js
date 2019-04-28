@@ -7,5 +7,5 @@ import GlobalVars from './GlobalVars'
 export default createGlobalStyle`
   ${GlobalReset}
   ${GlobalUtils}
-  ${props => GlobalVars(props.theme)}
+  ${props => GlobalVars(props.theme, props.homepage)}
 `

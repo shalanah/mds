@@ -18,7 +18,7 @@ class Home extends React.Component {
     // TODO: more with SEO
     const keywords = ['behind-the-wheel', 'adult drivers', 'nervous drivers', 'education', 'esl', 'behind the wheel', 'minnesota', 'twin cities', 'nervous', 'english as second language', 'minneapolis', 'saint paul', 'st. paul', 'midway driving school', 'midway driving', 'driving school', 'anxious', 'anxious drivers', 'adult', 'locations', 'rates', 'hours', 'lessons', 'driving', 'drivers']
     return (
-      <Layout>
+      <Layout homepage>
         <SEO
           title={title}
           keywords={keywords} />

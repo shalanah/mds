@@ -20,12 +20,12 @@ const Preview = styled.article`
   :nth-of-type(3n) {
     padding-right: 0;
   }
-  @media only screen and (min-width: 901px) {
+  @media only screen and (min-width: 1101px) {
     .desktop-last-row {
       margin-bottom: 0
     }
   }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1100px) {
     margin-bottom: 2rem;
     width: 100%;
     &:last-child {
@@ -34,7 +34,7 @@ const Preview = styled.article`
   }
 `
 const Card = styled.div`
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 1100px) {
     border: 1px solid rgba(0,0,0,.1);
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -61,21 +61,19 @@ const Summary = styled.p`
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 `
-const Tag = styled.div`
+const Tag = styled.a`
   display: inline-block;
-  margin: 0 calc(${props => props.theme.pad} * .25) calc(${props => props.theme.pad} * .7) 0;
-  a {
-    display: inline;
-    background-color: ${props => props.theme.accent};
-    color: #fff;
-    white-space: nowrap;
-    font-size: .8rem;
-    border-radius: 3px;
-    padding: .3rem .5rem;
-    transition: .2s;
-  }
-  a:hover {
-    background-color: #000;
+  margin: 0 calc(${props => props.theme.pad} * .25) calc(${props => props.theme.pad} * .4) 0;
+  background-color: #fff;
+  color: #777;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  white-space: nowrap;
+  font-size: .8rem;
+  border-radius: 3px;
+  padding: .3rem .5rem;
+  transition: .2s;
+  :hover {
+    color: ${props => props.theme.accentDark};
   }
 `
 
@@ -105,13 +103,10 @@ const Articles = ({data, history}) => {
           </Title>
           <Summary dangerouslySetInnerHTML={{ __html: excerpt }} />
           {tags.map((tag, j) => {
-            return <Tag key={`${i}-${j}`}>
-              <Link
-                to={`/tags/${kebabCase(tag)}`}
-                title={`Midway Driving School - Tags - ${tag}`}>
-                {tag}
-              </Link>
-            </Tag>
+            return <Tag key={`${i}-${j}`} onClick={(e) => {
+              e.stopPropagation()
+              navigate(`/tags/${kebabCase(tag)}`)
+            }}>{tag}</Tag>
           })}
         </Card>
       </Preview>

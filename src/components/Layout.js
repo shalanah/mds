@@ -5,7 +5,7 @@ import Footer from './Footer'
 import RecentPosts from './RecentPosts'
 import {ThemeProvider} from 'styled-components'
 
-const Layout = ({children}) => {
+const Layout = ({children, homepage}) => {
   return (
     <div>
       <ThemeProvider theme={{
@@ -22,7 +22,7 @@ const Layout = ({children}) => {
         'footerColor': '#fff'
       }}>
         <div>
-          <Global />
+          <Global homepage={homepage} />
           <Header />
           {children}
           <RecentPosts />

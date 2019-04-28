@@ -18,7 +18,7 @@ const Modal = styled.div`
     border-radius: 0;
     height: 100%;
     width: 100%;
-    max-width: 100%;
+    max-width: inherit;
     overflow: auto;
     left: 0px;
     top: 0px;
