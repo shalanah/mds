@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import {SectionText} from '../components/Section'
 import styled from 'styled-components'
-import {BtnPrimary} from '../components/Buttons'
+import {BtnSecondary} from '../components/Buttons'
 
 // Putting all styles here so markdown will automatically get them
 const Container = styled.div`
@@ -34,7 +34,7 @@ const Container = styled.div`
       font-size: 1.5rem;
     }
   }
-  p, li {
+  p, li, a {
     font-size: 1.7rem;
     font-weight: 300;
     line-height: 1.7;
@@ -101,14 +101,14 @@ class BlogPostTemplate extends React.Component {
             <div style={{display: 'block', overflow: 'auto'}}>
             {previous && (
               <Link style={{float: 'left'}} to={previous.fields.slug} rel="prev">
-              <BtnPrimary as={'span'}>
+              <BtnSecondary as={'span'}>
                 ← Previous article
-                </BtnPrimary>
+                </BtnSecondary>
               </Link>
             )}
             {next && (
-              <Link style={{float: 'right'}}  to={next.fields.slug} rel="next"><BtnPrimary as={'span'}>
-                Next article →</BtnPrimary>
+              <Link style={{float: 'right'}} to={next.fields.slug} rel="next"><BtnSecondary as={'span'}>
+                Next article →</BtnSecondary>
               </Link>
             )}
             </div>

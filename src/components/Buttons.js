@@ -28,3 +28,16 @@ export const BtnPrimary2 = styled(BtnPrimary)`
   padding: 12px 20px 12px 20px;
   border-radius: 0;
 `
+
+export const BtnSecondary = styled.button`
+  white-space: no-wrap;
+  color: ${props => props.theme.accentDark};
+  transition: .2s;
+  outline: none;
+  border: none;
+  font-weight: 400;
+  display: inline-block;
+  :hover {
+    color: ${props => props.theme.accentDarker};
+  }
+`
