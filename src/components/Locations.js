@@ -204,7 +204,8 @@ export default () => {
                 }
               }
             )}}>
-          <LocationModal type={type} onClose={() => {
+          <LocationModal type={type} onClose={(e) => {
+            e.stopPropagation() // just in case link below modal, does not trigger it
             setShowModal(init)
             document.body.style.overflow = ''
             }
