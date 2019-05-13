@@ -1,6 +1,6 @@
 const GlobalVars = (theme, homepage) => `
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
   html {
+    font-block: fallback;
     ${homepage === true ? 'scroll-behavior: smooth;' : ''}
     background-color: ${theme.footerBg};
   }

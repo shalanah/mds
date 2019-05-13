@@ -1,5 +1,5 @@
 import React from 'react'
-import {Section} from './Section'
+import { Section } from './Section'
 import styled from 'styled-components'
 import bg from '../assets/midway-driving-school-bg-driver.jpg'
 
@@ -46,13 +46,13 @@ const Discount = styled.div`
   position: absolute;
   right: 20px;
   bottom: -10px;
-  background-color: #302D2F;
+  background-color: #302d2f;
   width: 300px;
   height: 300px;
-  box-shadow: 2px 4px 10px rgba(0,0,0,.3);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
   color: #fff;
   padding: 30px;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   h3 {
     font-weight: 700;
@@ -62,12 +62,13 @@ const Discount = styled.div`
   }
   p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.3;
     margin: 0 auto auto 0;
     &:last-child {
+      font-size: 0.9rem;
       margin: auto auto 0 0;
-      color: #626466;
+      color: #aaa;
     }
   }
   @media only screen and (max-width: 700px) {
@@ -78,20 +79,35 @@ const Discount = styled.div`
   }
 `
 
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
 
 export default () => {
   const d = new Date()
   const month = months[d.getMonth()]
-  return <Container>
-    <Section style={{position: 'relative', height: '100%'}}>
-      <H2>Training designed for nervous&nbsp;adults</H2>
-      <Down href="#services" />
-      <Discount>
-        <h3>Special Discount!</h3>
-        <p>{`Mention the ${month} web discount when you call for $25 off a 6 or 7½ hour package!`}</p>
-        <p>{`Valid through the month of ${month} only.`}</p>
-      </Discount>
-    </Section>
-  </Container>
+  return (
+    <Container>
+      <Section style={{ position: 'relative', height: '100%' }}>
+        <H2>Training designed for nervous&nbsp;adults</H2>
+        <Down href="#services" />
+        <Discount>
+          <h3>Special Discount!</h3>
+          <p>{`Mention the ${month} web discount when you call for $25 off a 6 or 7½ hour package!`}</p>
+          <p>{`Valid through the month of ${month} only.`}</p>
+        </Discount>
+      </Section>
+    </Container>
+  )
 }
