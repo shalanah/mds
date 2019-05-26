@@ -27,7 +27,6 @@ const LogoContainer = styled.div`
 const Nav = styled.nav`
   margin: auto 0 auto auto;
   font-size: 1.125rem;
-  font-family: Roboto;
   font-weight: 700;
   right: 0;
   ul li {

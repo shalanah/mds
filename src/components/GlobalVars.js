@@ -8,7 +8,7 @@ const GlobalVars = (theme, homepage) => `
     background-color: ${theme.bodyBg};
   }
   html, body {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     color: ${theme.textDefault};  
   }
   p, h1, h2, h3, h4, h5, h6, li, ul {

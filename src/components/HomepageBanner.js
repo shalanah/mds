@@ -8,7 +8,6 @@ const Container = styled.div`
   background-color: #222;
   color: #fff;
   height: calc(100vh - 220px);
-  font-family: Roboto;
   font-weight: 700;
   position: relative;
   font-size: 40px;
