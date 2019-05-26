@@ -1,13 +1,13 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import {Section} from './Section'
-import img from '../assets/happy-driving-student.jpg'
-import {BtnPrimary2} from './Buttons'
+import { Section } from './Section'
+import { BtnPrimary2 } from './Buttons'
+import BackgroundImage from 'gatsby-background-image'
 
-const Image = styled.div`
+const Image = styled(BackgroundImage)`
   height: 90vh;
   width: 80%;
-  background-image: url(${img});
   background-size: cover;
   background-position: 50% 45%;
   float: right;
@@ -79,23 +79,42 @@ const Btn = styled(BtnPrimary2)`
 `
 
 const ExperienceCallout = () => {
-  return <Bg>
-    <Container>
-      <Inner>
-        <Image />
-        <TextBox>
-          <TextBoxInner>
-            Thousands of nervous adults have put their trust in our proven training program. You will begin to feel confident after your first driving lesson.
-            <Btn as={'a'} href="tel:612-623-4142">
-              Call Today
-            </Btn>
-          </TextBoxInner>
-        </TextBox>
-        {/* Clearfix */}
-        <div style={{clear: 'both'}} />
-      </Inner>
-    </Container>
-  </Bg>
+  return (
+    <Bg>
+      <Container>
+        <Inner>
+          <StaticQuery
+            query={graphql`
+              query {
+                file(
+                  relativePath: { eq: "happy-driving-student-cropped.jpg" }
+                ) {
+                  childImageSharp {
+                    fluid(maxWidth: 2000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            `}
+            render={data => <Image fluid={data.file.childImageSharp.fluid} />}
+          />
+          <TextBox>
+            <TextBoxInner>
+              Thousands of nervous adults have put their trust in our proven
+              training program. You will begin to feel confident after your
+              first driving lesson.
+              <Btn as={'a'} href="tel:612-623-4142">
+                Call Today
+              </Btn>
+            </TextBoxInner>
+          </TextBox>
+          {/* Clearfix */}
+          <div style={{ clear: 'both' }} />
+        </Inner>
+      </Container>
+    </Bg>
+  )
 }
 
 export default ExperienceCallout

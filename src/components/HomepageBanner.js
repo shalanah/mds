@@ -1,16 +1,16 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import { Section } from './Section'
 import styled from 'styled-components'
-import bg from '../assets/midway-driving-school-bg-driver.jpg'
+import BackgroundImage from 'gatsby-background-image'
 
 const Container = styled.div`
   background-color: #222;
   color: #fff;
   height: calc(100vh - 220px);
-  background-image: url("${bg}");
-  background-size: cover;
   font-family: Roboto;
   font-weight: 700;
+  position: relative;
   font-size: 40px;
   @media only screen and (max-width: 900px) {
     height: 60vw;
@@ -99,6 +99,32 @@ export default () => {
   const month = months[d.getMonth()]
   return (
     <Container>
+      <StaticQuery
+        query={graphql`
+          query {
+            img: file(
+              relativePath: { eq: "midway-driving-school-bg-driver.jpg" }
+            ) {
+              childImageSharp {
+                fluid(maxWidth: 3000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        `}
+        render={data => (
+          <BackgroundImage
+            style={{
+              backgroundSize: 'cover',
+              position: 'absolute',
+              width: '100%',
+              height: '100%'
+            }}
+            fluid={data.img.childImageSharp.fluid}
+          />
+        )}
+      />
       <Section style={{ position: 'relative', height: '100%' }}>
         <H2>Training designed for nervous&nbsp;adults</H2>
         <Down href="#services" />

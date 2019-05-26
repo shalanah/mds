@@ -1,8 +1,9 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import {Section} from './Section'
-import {Link} from 'gatsby'
-import logo from '../assets/midway-driving-school-logo.png'
+import { Section } from './Section'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Container = styled(Section)`
   height: 190px;
@@ -33,7 +34,7 @@ const Nav = styled.nav`
     float: left;
     margin-right: 5px;
     padding: 0px 15px;
-    transition: .17s;
+    transition: 0.17s;
   }
   ul li:last-of-type {
     margin-right: 0;
@@ -43,10 +44,10 @@ const Nav = styled.nav`
     padding: 9px 0;
     cursor: pointer;
     position: relative;
-    color: ${props => props.theme.linkAlt}; 
+    color: ${props => props.theme.linkAlt};
     :after {
       content: '';
-      transition: .15s;
+      transition: 0.15s;
       height: 4px;
       width: 0;
       background-color: ${props => props.theme.accent};
@@ -62,7 +63,7 @@ const Nav = styled.nav`
   li a.phone {
     white-space: no-wrap;
     color: #fff;
-    transition: .2s;
+    transition: 0.2s;
     background-color: ${props => props.theme.accentDark};
     padding-left: 20px;
     padding-right: 20px;
@@ -70,7 +71,7 @@ const Nav = styled.nav`
     :hover {
       color: #fff;
       background-color: ${props => props.theme.accentDarker};
-      box-shadow: 0px 1px 5px rgba(0,0,0,.3);
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
     }
     :hover:after {
       display: none;
@@ -79,40 +80,64 @@ const Nav = styled.nav`
 `
 
 export default ({}) => {
-  return <Container as={'header'}>
-    <div className={'pos-full'} style={{position: 'relative'}}>
-      <LogoContainer className={'pos-center-vert'}>
-        <Link
-          className={'pos-full'}
-          to={'/'}
-          title={'Midway Driving School Homepage'}>
-          <img
+  return (
+    <Container as={'header'}>
+      <div className={'pos-full'} style={{ position: 'relative' }}>
+        <LogoContainer className={'pos-center-vert'}>
+          <Link
             className={'pos-full'}
-            src={logo}
-            alt={'Midway Driving School'} />
-        </Link>
-      </LogoContainer>
-      <Nav className={"mobile pos-center-vert"}>
-        <ul>
-          <li><a className='phone' href="tel:612-623-4142">Call (612) 623-4142</a></li>
-        </ul>
-      </Nav>
-      <Nav className={"mobile-none pos-center-vert"}>
-        <ul>
-          <li>
-            <Link to="/#services">Services</Link>
-          </li>
-          <li>
-            <Link to="/#locations">Locations, Rates, and Hours</Link>
-          </li>
-          <li>
-            <Link to="/#faq">FAQ</Link>
-          </li>
-          <li>
-            <a className='phone' href="tel:612-623-4142">Call (612) 623-4142</a>
-          </li>
-        </ul>
-      </Nav>
-    </div>
-  </Container>
+            to={'/'}
+            title={'Midway Driving School Homepage'}>
+            <StaticQuery
+              query={graphql`
+                query {
+                  file(relativePath: { eq: "midway-driving-school-logo.png" }) {
+                    childImageSharp {
+                      fluid(maxWidth: 104) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              `}
+              render={data => (
+                <Img
+                  className={'pos-full'}
+                  fluid={data.file.childImageSharp.fluid}
+                  alt={'Midway Driving School'}
+                />
+              )}
+            />
+          </Link>
+        </LogoContainer>
+        <Nav className={'mobile pos-center-vert'}>
+          <ul>
+            <li>
+              <a className="phone" href="tel:612-623-4142">
+                Call (612) 623-4142
+              </a>
+            </li>
+          </ul>
+        </Nav>
+        <Nav className={'mobile-none pos-center-vert'}>
+          <ul>
+            <li>
+              <Link to="/#services">Services</Link>
+            </li>
+            <li>
+              <Link to="/#locations">Locations, Rates, and Hours</Link>
+            </li>
+            <li>
+              <Link to="/#faq">FAQ</Link>
+            </li>
+            <li>
+              <a className="phone" href="tel:612-623-4142">
+                Call (612) 623-4142
+              </a>
+            </li>
+          </ul>
+        </Nav>
+      </div>
+    </Container>
+  )
 }
