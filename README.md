@@ -1,7 +1,7 @@
 # MDS
 - Bootstrapped with Gatsby `my-blog-starter`
-- Development @shalanah
-- Init homepage design mock-ups by @matteveryday
+- Initial homepage design: @matteveryday
+- Frontend developement, design mods and additions: @shalanah
 
 ## Running
 - Local dev: `yarn install`, `gatsby develop`
