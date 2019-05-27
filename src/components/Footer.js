@@ -224,6 +224,15 @@ export default () => {
                             Drivers's License Locations - MN
                           </a>
                         </li>
+                        <li>
+                          <a
+                            target={'_blank'}
+                            href={
+                              'https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf'
+                            }>
+                            Driver's Manual - MN
+                          </a>
+                        </li>
                       </ul>
                     </SubColumns>
                     <SubColumns>
