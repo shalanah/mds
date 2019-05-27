@@ -21,7 +21,7 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typography": "^2.2.10",
     "gatsby-remark-copy-linked-files": "^2.0.11",
-    "gatsby-remark-images": "^3.0.12",
+    "gatsby-remark-images": "^3.0.13",
     "gatsby-remark-prismjs": "^3.2.6",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
@@ -55,11 +55,11 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "clean": "rimraf public/* .cache/*",
+    "clean": "rimraf public/* && rimraf .cache/*",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "npm run clean && gatsby build && gh-pages -d public"
   }
 }
