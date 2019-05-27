@@ -4,5 +4,5 @@
 - Frontend developement, design mods and additions: @shalanah
 
 ## Running
-- Local dev: `yarn install`, `gatsby develop`
-- Publish to gh-pages: `npm run deploy`
+- Local dev: `yarn install`, `yarn start`
+- Publish to gh-pages: `yarn deploy`
