@@ -1,10 +1,9 @@
 module.exports = {
-  pathPrefix: '/mds',
   siteMetadata: {
     title: `Midway Driving School – ESL/Nervous Adult and Home School Behind the Wheel Driving Lessons Serving the Twin Cities (Saint Paul, Minneapolis), Duluth and Rochester`,
     author: `Midway Driving School`,
-    description: `Midway Driving School - Driver education, tips, locations, rates, hours contact`,
-    siteUrl: `https://shalanah.github.io/mds/`,
+    description: `Midway Driving School - Driver education, tips, locations, rates, and hours`,
+    siteUrl: `https://midwaydrivingschools.com`,
     keywords: [
       'behind-the-wheel',
       'adult drivers',
@@ -92,7 +91,7 @@ module.exports = {
       options: {
         name: `Midway Driving School`,
         short_name: `MDS`,
-        start_url: `https://shalanah.github.io/mds/`,
+        start_url: `https://midwaydrivingschools.com`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
