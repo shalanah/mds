@@ -192,15 +192,6 @@ export default () => {
                           <a
                             target={'_blank'}
                             href={
-                              'https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf'
-                            }>
-                            Minnesota Driver Manual (PDF)
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            target={'_blank'}
-                            href={
                               'https://dps.mn.gov/divisions/dvs/Pages/default.aspx'
                             }>
                             Driver and Vehicle Services - MN
@@ -230,7 +221,7 @@ export default () => {
                             href={
                               'https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf'
                             }>
-                            Driver's Manual - MN
+                            Driver's Manual - MN (PDF)
                           </a>
                         </li>
                       </ul>
