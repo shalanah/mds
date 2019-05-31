@@ -63,7 +63,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "clean": "rimraf public/* .cache/*",
-    "clean-source": "rimraf .* content gatsby-browser.js gatsby-config.js gatsby-node.js LICENSE node_modules package.json README.md src/* static/* yarn.lock",
+    "clean-source": "rimraf content src static gatsby-* LICENSE README* yarn* package.json",
     "develop": "npm run clean && gatsby develop",
     "start": "npm run clean && npm run develop",
     "build": "npm run clean && gatsby build",
