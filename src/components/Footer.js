@@ -212,7 +212,7 @@ export default () => {
                             href={
                               'https://dps.mn.gov/divisions/dvs/locations/Pages/find-office-locations.aspx'
                             }>
-                            Drivers's License Locations - MN
+                            Driver's License Locations - MN
                           </a>
                         </li>
                         <li>
