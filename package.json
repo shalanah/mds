@@ -62,7 +62,7 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "clean": "rimraf public/* .cache/*",
+    "clean": "rimraf public .cache",
     "clean-source": "rimraf content src gatsby-* LICENSE README* yarn* package.json",
     "develop": "npm run clean && gatsby develop",
     "start": "npm run clean && npm run develop",
