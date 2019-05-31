@@ -25,40 +25,40 @@ const Modal = styled.div`
   }
   h2 {
     font-size: 1.75rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     color: #000;
   }
   h3 {
     font-size: 1.3rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     color: #000;
   }
   h4 {
     color: #000;
     font-size: 1.1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   h5 {
     color: #000;
     font-size: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   a {
-    color: ${props => props.theme.accentDark}
+    color: ${props => props.theme.accentDark};
   }
   table {
     border-collapse: collapse;
     font-weight: 400;
     width: 100%;
     margin-bottom: 1rem;
-    font-size: .9rem !important;
+    font-size: 0.9rem !important;
   }
   table.price {
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
   table.price td {
     vertical-align: top;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px 7px;
   }
   table.price tr:nth-of-type(even) {
@@ -83,16 +83,16 @@ const Col = styled.div`
   float: left;
   @media only screen and (max-width: 800px) {
     display: block;
-    width: 100%
+    width: 100%;
   }
 `
 const Col2 = styled.div`
   width: 35%;
   float: left;
   @media only screen and (max-width: 800px) {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     display: block;
-    width: 100%
+    width: 100%;
   }
 `
 
@@ -115,7 +115,8 @@ const Close = styled.div`
     cursor: pointer;
     color: #222;
   }
-  :before, :after {
+  :before,
+  :after {
     content: '';
     position: absolute;
     width: 100%;
@@ -134,44 +135,64 @@ const Close = styled.div`
 
 const rates = {
   main: [
-    { elem: '2 Hour Lessons', price: '$165.00' },
-    { elem: '6 Hour Behind the Wheel Package', price: '$480.00' },
-    {elem: '7½ Hour Package including Road Test', price: '$545.00'},
-    {elem: (<div><div style={{marginBottom: '.5rem'}}>3&#189; Hour Road Test Appointment*</div>
-    <div className="note">
-      <strong>*</strong> Students must take at least one
-      lesson before scheduling a Road Test appointment.
-  </div></div>), price: '$250.00'}
-  ],
-  outter: [
     { elem: '2 Hour Lessons', price: '$175.00' },
     { elem: '6 Hour Behind the Wheel Package', price: '$510.00' },
-    {elem: '7½ Hour Package including Road Test', price: '$575.00'},
-    {elem: (<div><div style={{marginBottom: '.5rem'}}>3&#189; Hour Road Test Appointment*</div>
-      <div className="note">
-        <strong>*</strong> Students must take at least one
-        lesson before scheduling a Road Test appointment.
-    </div></div>), price: '$260.00'}
+    { elem: '7½ Hour Package including Road Test', price: '$575.00' },
+    {
+      elem: (
+        <div>
+          <div style={{ marginBottom: '.5rem' }}>
+            3&#189; Hour Road Test Appointment*
+          </div>
+          <div className="note">
+            <strong>*</strong> Students must take at least one lesson before
+            scheduling a Road Test appointment.
+          </div>
+        </div>
+      ),
+      price: '$265.00'
+    }
+  ],
+  outter: [
+    { elem: '2 Hour Lessons', price: '$185.00' },
+    { elem: '6 Hour Behind the Wheel Package', price: '$540.00' },
+    { elem: '7½ Hour Package including Road Test', price: '$605.00' },
+    {
+      elem: (
+        <div>
+          <div style={{ marginBottom: '.5rem' }}>
+            3&#189; Hour Road Test Appointment*
+          </div>
+          <div className="note">
+            <strong>*</strong> Students must take at least one lesson before
+            scheduling a Road Test appointment.
+          </div>
+        </div>
+      ),
+      price: '$275.00'
+    }
   ]
 }
 
-const LocationModal = ({type, name, onClose}) => {
+const LocationModal = ({ type, name, onClose }) => {
   if (!type || !name) return null
   return (
     <Modal>
       <Close onClick={onClose} />
-      <div style={{position: 'relative'}}>
+      <div style={{ position: 'relative' }}>
         <div>
           <h2>{name}</h2>
           <Col>
             <h3>Rates</h3>
             <table className="price">
               <tbody>
-                {rates[type].map(({elem, price}, i) => {
-                  return <tr key={i}>
-                    <td>{elem}</td>
-                    <td>{price}</td>
-                  </tr>
+                {rates[type].map(({ elem, price }, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>{elem}</td>
+                      <td>{price}</td>
+                    </tr>
+                  )
                 })}
               </tbody>
             </table>
@@ -192,7 +213,9 @@ const LocationModal = ({type, name, onClose}) => {
               </tbody>
             </table>
             <h4>Office hours</h4>
-            <h5><a href="tel:612-623-4142">Call (612) 623-4142</a></h5>
+            <h5>
+              <a href="tel:612-623-4142">Call (612) 623-4142</a>
+            </h5>
             <table className="hours">
               <tbody>
                 <tr>
