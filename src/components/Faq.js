@@ -45,7 +45,7 @@ const faqs = [
     )
   },
   {
-    question: "Where can I find a Minnesota Driver's Manual?",
+    question: "Where can I find the Minnesota Driver's Manual?",
     answer: (
       <span>
         Here is a link to the{' '}
