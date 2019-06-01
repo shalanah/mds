@@ -5,4 +5,3 @@
 
 ## Running
 - Local dev: `yarn install`, `yarn start`
-- Publish to gh-pages: `yarn deploy`
