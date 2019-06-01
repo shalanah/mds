@@ -20,7 +20,6 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-remark-copy-linked-files": "^2.0.11",
     "gatsby-remark-images": "^3.0.13",
-    "gatsby-remark-prismjs": "^3.2.6",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-source-filesystem": "^2.0.37",
@@ -29,45 +28,30 @@
     "gsap": "^2.1.3",
     "intersection-observer": "^0.7.0",
     "lodash": "^4.17.11",
-    "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-mailto.js": "^1.1.0",
     "react-reveal": "^1.2.2",
     "react-transition-group": "^4.0.1",
-    "styled-components": "^4.2.0",
-    "typography": "^0.16.19"
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
-    "gh-pages-deploy": "^0.5.1",
     "prettier": "^1.17.1",
     "rimraf": "^2.6.3"
   },
   "license": "MIT",
-  "gh-pages-deploy": {
-    "staticpath": "public",
-    "commit": "Build for gh-pages",
-    "prep": [
-      "build"
-    ],
-    "post": [
-      "clean-source"
-    ]
-  },
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "clean": "rimraf public .cache",
-    "clean-source": "rimraf content src gatsby-* LICENSE README* yarn* package.json",
     "develop": "npm run clean && gatsby develop",
     "start": "npm run clean && npm run develop",
     "build": "npm run clean && gatsby build",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "deploy": "gh-pages-deploy"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
