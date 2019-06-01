@@ -93,7 +93,7 @@ module.exports = {
         icon: `src/assets/mds-icon.png`
       }
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-react-helmet`
   ]
 }
