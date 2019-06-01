@@ -71,7 +71,6 @@ module.exports = {
             }
           },
           `gatsby-remark-images`,
-          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`
         ]
