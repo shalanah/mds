@@ -219,11 +219,7 @@ const LocationModal = ({ type, name, onClose }) => {
             <table className="hours">
               <tbody>
                 <tr>
-                  <td>Monday-Thursday</td>
-                  <td>9:30am–5:00pm</td>
-                </tr>
-                <tr>
-                  <td>Friday</td>
+                  <td>Monday-Friday</td>
                   <td>9:30am–5:00pm</td>
                 </tr>
                 <tr>
