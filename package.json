@@ -43,6 +43,11 @@
     "rimraf": "^2.6.3"
   },
   "license": "MIT",
+  "browserslist": [
+    ">0.25%",
+    "ie 11",
+    "not dead"
+  ],
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
