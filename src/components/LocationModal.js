@@ -220,11 +220,11 @@ const LocationModal = ({ type, name, onClose }) => {
               <tbody>
                 <tr>
                   <td>Monday-Thursday</td>
-                  <td>9:30am–5:00pm</td>
+                  <td>9:30am–4:30pm</td>
                 </tr>
                 <tr>
                   <td>Friday</td>
-                  <td>9:30am–4:30pm</td>
+                  <td>9:30am–4:00pm</td>
                 </tr>
                 <tr>
                   <td>Saturday, Sunday</td>
