@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import Heading from '../components/Heading'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { SectionText } from '../components/Section'
@@ -57,32 +57,6 @@ const Container = styled.div`
     margin-left: 1.5rem;
   }
 `
-const H1 = styled.h1`
-  font-weight: 700;
-  line-height: 1.1;
-  font-size: 3.8rem;
-  width: 80%;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  @media only screen and (max-width: 800px) {
-    font-size: 2rem;
-    width: 100%;
-  }
-`
-const Date = styled.p`
-  color: #fff;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-`
-const Heading = styled(BackgroundImage)`
-  position: relative;
-  min-height: 20vw;
-  background-color: #141a18;
-  background-size: cover;
-  background-position: 50% 85%;
-  @media only screen and (max-width: 800px) {
-    min-height: 10vw;
-  }
-`
 
 const BlogPostTemplate = ({
   data: {
@@ -98,12 +72,11 @@ const BlogPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <Heading fluid={file.childImageSharp.fluid}>
-        <SectionText>
-          <H1>{post.frontmatter.title}</H1>
-          <Date>{post.frontmatter.date}</Date>
-        </SectionText>
-      </Heading>
+      <Heading
+        fluid={file.childImageSharp.fluid}
+        title={post.frontmatter.title}
+        sub={post.frontmatter.date}
+      />
       <Container>
         <SectionText>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
