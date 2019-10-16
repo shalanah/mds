@@ -20,7 +20,7 @@ const Sub = styled.p`
 
 const Container = styled(BackgroundImage)`
   position: relative;
-  min-height: ${props => (props.shorter ? '10vw' : '20vw')};
+  min-height: ${props => (props.shorter === true ? '10vw' : '20vw')};
   background-size: cover;
   background-position: 50% 85%;
   color: #fff;

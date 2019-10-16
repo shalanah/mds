@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import Heading from '../components/Heading'
 import SEO from '../components/seo'
 import Content from '../components/Location'
 import { graphql } from 'gatsby'
 
-function getUrlParameter(name) {
+const getUrlParameter = (name, search) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]')
-  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)')
-  var results = regex.exec(window.location.search)
+  const regex = new RegExp('[\\?&]' + name + '=([^&#]*)')
+  const results = regex.exec(search)
   return results === null
     ? ''
     : decodeURIComponent(results[1].replace(/\+/g, ' '))
@@ -76,12 +76,15 @@ const Location = ({
       siteMetadata: { title, keywords }
     },
     file
-  }
+  },
+  location
 }) => {
-  const locale = getUrlParameter('location') || ''
+  const locale = getUrlParameter('location', location.search) || ''
   const { type } = places.find(({ name }) => name === locale) || {}
-  useState(() => {
-    if (!type) window.location = '/'
+  useEffect(() => {
+    if (!type) {
+      window.location = '/'
+    }
   }, [type])
   if (!type) return null
 
