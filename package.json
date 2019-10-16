@@ -6,6 +6,7 @@
   "author": "Shalanah Dawson <shalanahfaith@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
+    "babel-polyfill": "^6.26.0",
     "gatsby": "^2.7.1",
     "gatsby-background-image": "^0.6.2",
     "gatsby-cli": "^2.6.2",
