@@ -79,9 +79,7 @@ const Location = ({
   },
   location
 }) => {
-  console.log(location)
   const locale = getUrlParameter('location', location.search) || ''
-  console.log(locale)
   const { type } = places.find(({ name }) => name === locale) || {}
   useEffect(() => {
     if (!type) {

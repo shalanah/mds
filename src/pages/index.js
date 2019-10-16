@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import 'babel-polyfill'
 
 import Layout from '../components/Layout'
 import Services from '../components/Services'
