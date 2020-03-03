@@ -67,9 +67,11 @@ export default () => {
         <ul>
           {places.map(({ name }, i) => {
             return (
-              <LocationLink to={`/location?location=${name}`} key={i}>
-                {name}
-              </LocationLink>
+              <li key={i}>
+                <LocationLink to={`/location?location=${name}`}>
+                  {name}
+                </LocationLink>
+              </li>
             )
           })}
         </ul>
