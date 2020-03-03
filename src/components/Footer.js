@@ -125,6 +125,7 @@ export default () => {
                   />
                   <a
                     href={'https://dps.mn.gov/Pages/default.aspx'}
+                    rel={'noopener noreferrer'}
                     target={'_blank'}>
                     <Logo
                       fluid={data.mdps.childImageSharp.fluid}
@@ -149,6 +150,7 @@ export default () => {
                     <a
                       className={'accent'}
                       href={'https://dps.mn.gov/Pages/default.aspx'}
+                      rel={'noopener noreferrer'}
                       target={'_blank'}>
                       Minnesota Department of Public Safety.
                     </a>
@@ -158,6 +160,7 @@ export default () => {
                     <a
                       className={'accent'}
                       href={'http://www.drivinglessonsschool.com/'}
+                      rel={'noopener noreferrer'}
                       target={'_blank'}>
                       Recommended Driving Schools
                     </a>
@@ -191,6 +194,7 @@ export default () => {
                         <li>
                           <a
                             target={'_blank'}
+                            rel={'noopener noreferrer'}
                             href={
                               'https://dps.mn.gov/divisions/dvs/Pages/default.aspx'
                             }>
@@ -200,6 +204,7 @@ export default () => {
                         <li>
                           <a
                             target={'_blank'}
+                            rel={'noopener noreferrer'}
                             href={
                               'https://dps.mn.gov/divisions/dvs/Pages/drivers-license-information.aspx'
                             }>
@@ -209,6 +214,7 @@ export default () => {
                         <li>
                           <a
                             target={'_blank'}
+                            rel={'noopener noreferrer'}
                             href={
                               'https://dps.mn.gov/divisions/dvs/locations/Pages/find-office-locations.aspx'
                             }>
@@ -218,6 +224,7 @@ export default () => {
                         <li>
                           <a
                             target={'_blank'}
+                            rel={'noopener noreferrer'}
                             href={
                               'https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf'
                             }>
@@ -232,6 +239,7 @@ export default () => {
                         <li>
                           <a
                             target={'_blank'}
+                            rel={'noopener noreferrer'}
                             href={
                               'https://www.facebook.com/MidwayDrivingSchool/'
                             }>

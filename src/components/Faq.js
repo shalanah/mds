@@ -51,6 +51,7 @@ const faqs = [
         Here is a link to the{' '}
         <a
           target={'_blank'}
+          rel={'noopener noreferrer'}
           href={
             'https://dps.mn.gov/divisions/dvs/forms-documents/Documents/Minnesota_Drivers_Manual.pdf'
           }>
