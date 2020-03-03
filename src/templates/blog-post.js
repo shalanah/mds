@@ -41,7 +41,7 @@ const Container = styled.div`
   li,
   a {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
     margin-bottom: 3rem;
     @media only screen and (max-width: 800px) {

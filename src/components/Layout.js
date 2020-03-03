@@ -16,7 +16,7 @@ const Layout = ({ children, homepage }) => {
           accent: '#6DC1FF',
           accentDark: '#36a6f7',
           accentDarker: '#1c8bdb',
-          textDefault: '#777',
+          textDefault: '#555',
           textHeader: '#302D2F',
           pad: '20px',
           footerBg: '#302D2F',

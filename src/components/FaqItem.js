@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import {TweenMax} from 'gsap/TweenMax'
-import {Transition} from 'react-transition-group'
+import { TweenMax } from 'gsap/TweenMax'
+import { Transition } from 'react-transition-group'
 
 const Container = styled.div`
   cursor: pointer;
@@ -14,7 +14,7 @@ const Dt = styled.dt`
   position: relative;
 `
 const Dd = styled.dd`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.4rem;
   padding-right: 20px;
   overflow: hidden;
@@ -29,13 +29,14 @@ const ExpandIcon = styled.div`
   top: 20px;
   color: #000;
   border-radius: 100%;
-  transition: .2s;
+  transition: 0.2s;
   ${Container}:hover & {
     background-color: #333;
     color: #fff;
   }
-  ::before, ::after {
-    content: '';    
+  ::before,
+  ::after {
+    content: '';
     border-radius: 2px;
     background-color: currentColor;
     position: absolute;
@@ -47,8 +48,8 @@ const ExpandIcon = styled.div`
     top: ${(circleLength - plusLength) / 2}px;
     left: 50%;
     margin-left: -1px;
-    transition: transform .2s ease-in-out, opacity .2s;
-    ${props => props.open ? 'transform: rotate(90deg); opacity: 0;' : ''}
+    transition: transform 0.2s ease-in-out, opacity 0.2s;
+    ${props => (props.open ? 'transform: rotate(90deg); opacity: 0;' : '')}
   }
   ::after {
     width: ${plusLength}px;
@@ -59,39 +60,46 @@ const ExpandIcon = styled.div`
   }
 `
 
-const FaqItem = ({question, answer}) => {
+const FaqItem = ({ question, answer }) => {
   const [open, setOpen] = useState(false)
-  return <Container onClick={() => {setOpen((prev) => !prev)}}>
-    <Dt>
-      <div>{question}</div>
-      <ExpandIcon open={open} />
-    </Dt>
-    <Transition
-      in={open}
-      appear
-      mountOnEnter
-      unmountOnExit
-      addEndListener={(node, done) => {
-        TweenMax.fromTo( // eslint-disable-line
-          node,
-          .1,
-          {
-            opacity: open ? 0 : 1, 
-            height: open ? 0 : 'auto',
-            paddingBottom: open ? 0 : '2rem'
-          }, {
-            opacity: open ? 1 : 0,
-            height: open ? 'auto' : 0,
-            paddingBottom: open ? '2rem' : 0,
-            onComplete: function () {
-              done()
-            }
-          }
-        )
+  return (
+    <Container
+      onClick={() => {
+        setOpen(prev => !prev)
       }}>
-      <Dd>{answer}</Dd>
-    </Transition>
-  </Container>
+      <Dt>
+        <div>{question}</div>
+        <ExpandIcon open={open} />
+      </Dt>
+      <Transition
+        in={open}
+        appear
+        mountOnEnter
+        unmountOnExit
+        addEndListener={(node, done) => {
+          TweenMax.fromTo(
+            // eslint-disable-line
+            node,
+            0.1,
+            {
+              opacity: open ? 0 : 1,
+              height: open ? 0 : 'auto',
+              paddingBottom: open ? 0 : '2rem'
+            },
+            {
+              opacity: open ? 1 : 0,
+              height: open ? 'auto' : 0,
+              paddingBottom: open ? '2rem' : 0,
+              onComplete: function() {
+                done()
+              }
+            }
+          )
+        }}>
+        <Dd>{answer}</Dd>
+      </Transition>
+    </Container>
+  )
 }
 
 export default FaqItem

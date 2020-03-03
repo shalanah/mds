@@ -19,7 +19,7 @@ const SectionWithText = styled.section`
   }
 `
 export const SectionP = styled.p`
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -42,9 +42,11 @@ const Heading = styled.h1`
   }
 `
 
-export const SectionText = ({heading, children, ...props}) => {
-  return <SectionWithText {...props}>
-    {heading && <Heading>{heading}</Heading>}
-    {children}
-  </SectionWithText>
+export const SectionText = ({ heading, children, ...props }) => {
+  return (
+    <SectionWithText {...props}>
+      {heading && <Heading>{heading}</Heading>}
+      {children}
+    </SectionWithText>
+  )
 }

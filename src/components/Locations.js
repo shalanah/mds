@@ -19,7 +19,7 @@ const LocationLink = styled(Link)`
   color: #36a6f7;
   position: relative;
   padding-bottom: 2px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 22px;
   transition: 0.2s;
   :hover {
