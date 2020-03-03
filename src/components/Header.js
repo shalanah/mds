@@ -70,7 +70,7 @@ const Nav = styled.nav`
     :hover {
       color: #fff;
       background-color: ${props => props.theme.accentDarker};
-      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+      /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); */
     }
     :hover:after {
       display: none;
