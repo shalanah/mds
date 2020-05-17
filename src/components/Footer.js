@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import { Section } from './Section'
 import Img from 'gatsby-image'
@@ -165,6 +165,18 @@ export default () => {
                       Recommended Driving Schools
                     </a>
                   </p>
+                  <h2>Midway Links</h2>
+                  <ul>
+                    <li>
+                      <Link to="/#services">Services</Link>
+                    </li>
+                    <li>
+                      <Link to="/#locations">Locations</Link>
+                    </li>
+                    <li>
+                      <Link to="/#faq">Frequently Asked Questions (FAQ)</Link>
+                    </li>
+                  </ul>
                 </Col1>
                 <Col2 />
                 <Col3>

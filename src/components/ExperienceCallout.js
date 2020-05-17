@@ -6,10 +6,10 @@ import { BtnPrimary2 } from './Buttons'
 import BackgroundImage from 'gatsby-background-image'
 
 const Image = styled(BackgroundImage)`
-  height: 90vh;
+  height: 75vh;
   width: 80%;
   background-size: cover;
-  background-position: 50% 45%;
+  background-position: 50% 30%;
   float: right;
   @media screen and (orientation: portrait) {
     width: 100%;
@@ -20,7 +20,7 @@ const Bg = styled.div`
   background: #f5f5f5;
 `
 const Container = styled(Section)`
-  padding: calc(${props => props.theme.pad} * 5) 0px;
+  padding: calc(${props => props.theme.pad} * 2) 0px;
   position: relative;
   @media screen and (orientation: portrait) {
     padding: 0;
