@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import 'intersection-observer'
 import styled from 'styled-components'
 import { Section } from './Section'
 import { Link } from 'gatsby'
@@ -57,13 +58,13 @@ const Nav = styled.nav`
     padding: 9px 0;
     cursor: pointer;
     position: relative;
-    color: ${props => props.theme.linkAlt};
+    color: ${(props) => props.theme.linkAlt};
     :after {
       content: '';
       transition: 0.15s;
       height: 4px;
       width: 0;
-      background-color: ${props => props.theme.accent};
+      background-color: ${(props) => props.theme.accent};
       left: 50%;
       bottom: -3px;
       transform: translateX(-50%);
@@ -77,13 +78,13 @@ const Nav = styled.nav`
     white-space: no-wrap;
     color: #fff;
     transition: 0.2s;
-    background-color: ${props => props.theme.accentDark};
+    background-color: ${(props) => props.theme.accentDark};
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 5px;
     :hover {
       color: #fff;
-      background-color: ${props => props.theme.accentDarker};
+      background-color: ${(props) => props.theme.accentDarker};
     }
     :hover:after {
       display: none;
@@ -254,7 +255,7 @@ const MainLogo = () => {
               }
             }
           `}
-          render={data => (
+          render={(data) => (
             <Img
               className={'pos-full'}
               fluid={data.file.childImageSharp.fluid}
@@ -273,7 +274,7 @@ export default ({}) => {
   useEffect(() => {
     let elem = document.getElementById(navId)
     let observer
-    let callback = entries => {
+    let callback = (entries) => {
       const [{ isIntersecting }] = entries
       const currIsSticky = !isIntersecting
       if (currIsSticky !== isSticky) setIsSticky(currIsSticky)
