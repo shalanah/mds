@@ -9,14 +9,23 @@ export const Section = styled.section`
 
 const SectionWithText = styled.section`
   max-width: 1200px;
-  padding: calc(${props => props.theme.pad} * 6) ${props => props.theme.pad};
+  padding: ${props =>
+    props.anchor
+      ? `calc(${props.theme.pad} * 6) ${props.theme.pad}`
+      : `calc(${props.theme.pad} * 4) ${props.theme.pad}`};
   margin: 0 auto;
   &.smaller {
     max-width: 880px;
   }
   @media only screen and (max-width: 800px) {
-    padding: calc(${props => props.theme.pad} * 4.5) ${props => props.theme.pad}
-      calc(${props => props.theme.pad} * 0.5);
+    padding: ${props =>
+      props.anchor
+        ? `
+    calc(${props.theme.pad} * 4.5) ${props.theme.pad}
+      calc(${props.theme.pad} * 0.5)`
+        : `
+      calc(${props.theme.pad} * 1.5) ${props.theme.pad}
+  `};
   }
 `
 export const SectionP = styled.p`

@@ -81,7 +81,7 @@ const faqs = [
 
 export default () => {
   return (
-    <SectionText heading={'FAQ'} id={'faq'} className={'smaller'}>
+    <SectionText anchor heading={'FAQ'} id={'faq'} className={'smaller'}>
       <Dl>
         {faqs.map((props, i) => {
           return <FaqItem {...props} key={i} />

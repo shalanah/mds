@@ -33,8 +33,8 @@ const LogoContainer = styled.div`
   width: 104px;
   height: 69px;
   @media only screen and (max-width: 900px) {
-    width: 56px;
-    height: 38px;
+    width: 45px;
+    height: 30px;
   }
 `
 
@@ -186,7 +186,7 @@ const MobileNav = () => {
           <MainLogo />
           <Nav className={'mobile pos-center-vert'}>
             <ul>
-              <li style={{ marginRight: '15px' }}>
+              <li style={{ marginRight: '13px' }}>
                 <PhoneNumber />
               </li>
               <li>

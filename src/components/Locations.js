@@ -48,7 +48,11 @@ const Columns = styled.div`
 
 export default () => {
   return (
-    <SectionText id={'locations'} heading={'Locations'} className={'smaller'}>
+    <SectionText
+      id={'locations'}
+      anchor
+      heading={'Locations'}
+      className={'smaller'}>
       <SectionP>
         Free pickup is available for most of the Twin City, Duluth and Rochester
         metro areas. If you have passed the Minnesota Instruction Permit

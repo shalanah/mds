@@ -48,7 +48,11 @@ const list = [
 
 export default () => {
   return (
-    <SectionText id={'services'} heading={'Services'} className={'smaller'}>
+    <SectionText
+      anchor
+      id={'services'}
+      heading={'Services'}
+      className={'smaller'}>
       <SectionP>
         Midway Driving School has been the leader in Adult Behind the Wheel
         driver education for over 40 years.

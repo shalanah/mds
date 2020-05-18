@@ -25,10 +25,10 @@ const H2 = styled.h2`
   left: 20px;
   font-size: 3.75rem;
   @media only screen and (max-width: 900px) {
-    font-size: 2rem;
-  }
-  @media only screen and (max-height: 500px) {
     font-size: 2.5rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 2rem;
   }
 `
 const Down = styled.a`
