@@ -268,6 +268,21 @@ const MainLogo = () => {
   )
 }
 
+const COVIDBanner = styled.div`
+  display: flex;
+  min-height: 45px;
+  padding: 10px;
+  line-height: 1.15;
+
+  background: ${(props) => props.theme.accentDarker};
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+`
+
 export default ({}) => {
   const navId = 'web-nav'
   const [isSticky, setIsSticky] = useState(false) // actually get the position FIRST!
@@ -295,6 +310,24 @@ export default ({}) => {
   }, [isSticky, setIsSticky])
   return (
     <>
+      <COVIDBanner>
+        <span
+          style={{
+            textAlign: 'center',
+            flex: '0 0 160px',
+            padding: '8px 10px',
+            background: 'rgba(0,0,0,.3)',
+            marginRight: '10px',
+            borderRadius: '5px',
+            fontWeight: 'bold'
+          }}>
+          COVID-19 Update
+        </span>
+        <span style={{ textAlign: 'left' }}>
+          We are unable to book lessons at this time. We are sorry for any
+          inconvience. Please check back in July.
+        </span>
+      </COVIDBanner>
       {/* Mobile */}
       <MobileNav />
       {/* Web */}
