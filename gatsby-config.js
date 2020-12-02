@@ -35,15 +35,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Roboto`,
-            subsets: [`latin`],
-            variants: [`400`, `500`, `700`]
-          }
-        ]
+          `Roboto\:400,500,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
       }
     },
     {
