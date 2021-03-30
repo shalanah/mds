@@ -325,7 +325,7 @@ export default ({}) => {
         </span>
         <span style={{ textAlign: 'left' }}>
           We are unable to book lessons at this time. We are sorry for any
-          inconvenience. Please check back after April 1st.
+          inconvenience. Please check back after May 1st.
         </span>
       </COVIDBanner>
       {/* Mobile */}
