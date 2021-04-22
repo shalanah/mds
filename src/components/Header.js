@@ -274,7 +274,7 @@ const COVIDBanner = styled.div`
   padding: 10px;
   line-height: 1.15;
 
-  background: ${(props) => props.theme.accentDarker};
+  background: green;
   color: #fff;
   font-size: 15px;
   position: relative;
@@ -314,18 +314,19 @@ export default ({}) => {
         <span
           style={{
             textAlign: 'center',
-            flex: '0 0 160px',
+            flex: '0 0 120px',
             padding: '8px 10px',
-            background: 'rgba(0,0,0,.3)',
+            background: '#fff',
+            color: '#000',
             marginRight: '10px',
             borderRadius: '5px',
             fontWeight: 'bold'
           }}>
-          COVID-19 Update
+          COVID Update
         </span>
         <span style={{ textAlign: 'left' }}>
-          We are unable to book lessons at this time. We are sorry for any
-          inconvenience. Please check back after May 1st.
+          Reopening office on Monday May 3rd to start booking lessons! Staff is
+          fully vaccinated.
         </span>
       </COVIDBanner>
       {/* Mobile */}

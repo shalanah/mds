@@ -21,7 +21,7 @@ const Col2 = styled.div`
   }
 `
 const Container = styled.div`
-  color: ${props => props.theme.textHeader};
+  color: ${(props) => props.theme.textHeader};
   h2,
   h3 {
     font-weight: 700;
@@ -31,12 +31,12 @@ const Container = styled.div`
     display: block;
     margin-top: 1rem;
     font-size: 1.25rem;
-    color: ${props => props.theme.accentDark};
+    color: ${(props) => props.theme.accentDark};
     transition: 0.2s;
     font-weight: 700;
   }
   a:hover {
-    color: ${props => props.theme.accentDarker};
+    color: ${(props) => props.theme.accentDarker};
     text-decoration: underline;
   }
   h2 {
@@ -107,9 +107,9 @@ const Container = styled.div`
 
 const rates = {
   main: [
-    { elem: '2 Hour Lessons', price: '$175.00' },
-    { elem: '6 Hour Behind the Wheel Package', price: '$510.00' },
-    { elem: '7½ Hour Package including Road Test', price: '$575.00' },
+    { elem: '2 Hour Lessons', price: '$185.00' },
+    { elem: '6 Hour Behind the Wheel Package', price: '$545.00' },
+    { elem: '7½ Hour Package including Road Test', price: '$660.00' },
     {
       elem: (
         <div>
@@ -122,13 +122,13 @@ const rates = {
           </div>
         </div>
       ),
-      price: '$265.00'
+      price: '$295.00'
     }
   ],
   outter: [
-    { elem: '2 Hour Lessons', price: '$185.00' },
-    { elem: '6 Hour Behind the Wheel Package', price: '$540.00' },
-    { elem: '7½ Hour Package including Road Test', price: '$605.00' },
+    { elem: '2 Hour Lessons', price: '$195.00' },
+    { elem: '6 Hour Behind the Wheel Package', price: '$575.00' },
+    { elem: '7½ Hour Package including Road Test', price: '$670.00' },
     {
       elem: (
         <div>
@@ -141,7 +141,7 @@ const rates = {
           </div>
         </div>
       ),
-      price: '$275.00'
+      price: '$305.00'
     }
   ]
 }
