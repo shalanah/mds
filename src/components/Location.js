@@ -128,7 +128,7 @@ const rates = {
   outter: [
     { elem: '2 Hour Lessons', price: '$195.00' },
     { elem: '6 Hour Behind the Wheel Package', price: '$575.00' },
-    { elem: '7½ Hour Package including Road Test', price: '$670.00' },
+    { elem: '7½ Hour Package including Road Test', price: '$690.00' },
     {
       elem: (
         <div>
