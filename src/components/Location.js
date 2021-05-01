@@ -189,11 +189,11 @@ export default ({ type = 'main' }) => {
               <tbody>
                 <tr>
                   <td>Monday-Thursday</td>
-                  <td>9:30am–4:30pm</td>
+                  <td>10:00am–4:00pm</td>
                 </tr>
                 <tr>
                   <td>Friday</td>
-                  <td>9:30am–4:00pm</td>
+                  <td>10:00am–3:00pm</td>
                 </tr>
                 <tr>
                   <td>Saturday, Sunday</td>
