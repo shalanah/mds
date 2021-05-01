@@ -193,7 +193,7 @@ export default ({ type = 'main' }) => {
                 </tr>
                 <tr>
                   <td>Friday</td>
-                  <td>10:00am–3:00pm</td>
+                  <td>10:00am–3:30pm</td>
                 </tr>
                 <tr>
                   <td>Saturday, Sunday</td>
