@@ -10,7 +10,7 @@ const Dl = styled.dl`
   border-bottom: 1px solid #000;
   line-height: 1.4;
   a {
-    color: ${props => props.theme.accentDark};
+    color: ${(props) => props.theme.accentDark};
     text-decoration: underline;
   }
 `
@@ -35,7 +35,7 @@ const faqs = [
         We’re here to help! Just{' '}
         <a
           href="tel:612-623-4142"
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation()
           }}>
           call us
@@ -63,7 +63,7 @@ const faqs = [
   {
     question: 'What is the best package for training a new driver?',
     answer:
-      'Once you have completed your first lesson, your instructor will let you know after which package will help prepare you the best for the Road Test. In most cases, the 7½ hr package is perfect for covering everything you need to know for the Road Test.'
+      'After you have completed your first lesson, your instructor will let you know which package will help prepare you best for the Road Test. In most cases, the 7½ hr package is perfect for covering everything you need to know for the Road Test.'
   },
   {
     question:
