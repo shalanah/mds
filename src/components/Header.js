@@ -325,8 +325,7 @@ export default ({}) => {
           COVID Update
         </span>
         <span style={{ textAlign: 'left' }}>
-          Reopening office on Monday May 3rd to start booking lessons! Staff is
-          fully vaccinated.
+          Open and booking lessons! Staff is fully vaccinated.
         </span>
       </COVIDBanner>
       {/* Mobile */}
