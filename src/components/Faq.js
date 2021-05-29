@@ -26,7 +26,7 @@ const faqs = [
     question:
       'Should I set up a Road Test appointment with Minnesota Department of Motor Vehicles before starting at Midway?',
     answer:
-      'No, not at all! Ask us, and we can schedule that appointment for you.'
+      'Since recent changes at MN DVS have made scheduling Road Tests much more complicated, if you are wanting us to accompany you, please call us for advice on arranging an appointment.'
   },
   {
     question: 'I don’t have my permit yet, where do I go to get one?',
