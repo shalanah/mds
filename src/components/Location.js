@@ -108,7 +108,7 @@ const Container = styled.div`
 const rates = {
   main: [
     { elem: '2 Hour Lessons', price: '$195.00' },
-    { elem: '6 Hour Behind the Wheel Package', price: '$575.00' }
+    { elem: '6 Hour Behind the Wheel Package', price: '$565.00' }
     // { elem: '7½ Hour Package including Road Test', price: '$660.00' },
     // {
     //   elem: (
@@ -131,7 +131,7 @@ const rates = {
   ],
   outter: [
     { elem: '2 Hour Lessons', price: '$205.00' },
-    { elem: '6 Hour Behind the Wheel Package', price: '$605.00' }
+    { elem: '6 Hour Behind the Wheel Package', price: '$595.00' }
     // { elem: '7½ Hour Package including Road Test', price: '$690.00' },
     // {
     //   elem: (
