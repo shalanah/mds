@@ -42,7 +42,7 @@ const list = [
   'Private Lessons',
   'Free Pickup Service',
   'Single Lessons or Discount Packages',
-  'Cars Available for MN License Road Test',
+  'Behind-the-Wheel Training', //   'Cars Available for MN License Road Test',
   'ESL Experts'
 ]
 
@@ -126,7 +126,7 @@ export default () => {
               }
             }
           `}
-          render={data =>
+          render={(data) =>
             list.map((text, i) => {
               return (
                 <ServiceItem key={i}>
