@@ -180,13 +180,13 @@ export default ({ type = 'main' }) => {
             <table className="hours">
               <tbody>
                 <tr>
-                  <td>Monday-Thursday</td>
-                  <td>7am–8pm</td>
-                </tr>
-                <tr>
-                  <td>Friday</td>
+                  <td>Monday-Friday</td>
                   <td>7am–5pm</td>
                 </tr>
+                {/* <tr>
+                  <td>Friday</td>
+                  <td>7am–5pm</td>
+                </tr> */}
               </tbody>
             </table>
             <h3>Office hours</h3>
