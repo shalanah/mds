@@ -196,13 +196,13 @@ export default ({ type = 'main' }) => {
             <table className="hours">
               <tbody>
                 <tr>
-                  <td>Monday-Thursday</td>
-                  <td>10:00am–4:00pm</td>
+                  <td>Monday-Friday</td>
+                  <td>10:00am–3:00pm</td>
                 </tr>
-                <tr>
+                {/* <tr>
                   <td>Friday</td>
                   <td>10:00am–3:30pm</td>
-                </tr>
+                </tr> */}
                 <tr>
                   <td>Saturday, Sunday</td>
                   <td>Closed</td>
