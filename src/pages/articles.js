@@ -6,10 +6,10 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
-const Bg = styled.div`
+export const Bg = styled.div`
   background: linear-gradient(
-    ${props => props.theme.bodyBgAlt},
-    ${props => props.theme.bodyBg}
+    ${(props) => props.theme.bodyBgAlt},
+    ${(props) => props.theme.bodyBg}
   );
 `
 
