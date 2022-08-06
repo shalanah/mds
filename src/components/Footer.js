@@ -5,8 +5,8 @@ import { Section } from './Section'
 import Img from 'gatsby-image'
 
 const Container = styled.footer`
-  background-color: ${props => props.theme.footerBg};
-  color: ${props => props.theme.footerColor};
+  background-color: ${(props) => props.theme.footerBg};
+  color: ${(props) => props.theme.footerColor};
   /* Declaring links here because <Link> is weird :) */
   a:link,
   a:visited,
@@ -21,7 +21,7 @@ const Container = styled.footer`
   a.accent:visited,
   a.accent:hover,
   a.accent:active {
-    color: ${props => props.theme.accent};
+    color: ${(props) => props.theme.accent};
   }
   /* Used to obscure email name from scrapers */
   .m:after {
@@ -32,15 +32,15 @@ const Logo = styled(Img)`
   width: 100px;
   height: 100px;
   display: inline-block;
-  margin-right: calc(${props => props.theme.pad} * 1.5);
+  margin-right: calc(${(props) => props.theme.pad} * 1.5);
   @media only screen and (max-width: 900px) {
     width: 70px;
     height: 70px;
-    margin-right: calc(${props => props.theme.pad} * 0.5);
+    margin-right: calc(${(props) => props.theme.pad} * 0.5);
   }
 `
 const Pad = styled.div`
-  padding: ${props => props.theme.pad} 0;
+  padding: ${(props) => props.theme.pad} 0;
 `
 const FlexToBlock = styled.div`
   display: flex;
@@ -112,7 +112,7 @@ export default () => {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         return (
           <Container>
             <Pad />
@@ -180,7 +180,7 @@ export default () => {
                 </Col1>
                 <Col2 />
                 <Col3>
-                  <h2>Contact</h2>
+                  <h2>Contact Phone</h2>
                   <FlexToBlock as={'ul'}>
                     <SubColumns as={'li'}>
                       Twin Cities
@@ -198,6 +198,16 @@ export default () => {
                       <a href="tel:507-289-3456">(507) 289-3456</a>
                     </SubColumns>
                   </FlexToBlock>
+                  <Pad />
+                  <h2>Contact Form</h2>
+                  <Link
+                    to="/contact"
+                    style={{
+                      cursor: 'pointer',
+                      textUnderlineOffset: '.2em'
+                    }}>
+                    Click here to send a message →
+                  </Link>
                   <Pad />
                   <FlexToBlock>
                     <SubColumns>

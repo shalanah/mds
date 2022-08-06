@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import 'babel-polyfill'
-
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
 import Services from '../components/Services'
 import Locations from '../components/Locations'
 import Faq from '../components/Faq'
 import HomepageBanner from '../components/HomepageBanner'
-import SEO from '../components/seo'
 import ExperienceCallout from '../components/ExperienceCallout'
 
 const Home = ({
