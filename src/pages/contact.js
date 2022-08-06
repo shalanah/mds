@@ -19,6 +19,12 @@ const A = styled.a`
   text-underline-offset: 0.05em;
 `
 
+const toTitleCase = (str) => {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  })
+}
+
 const Label = styled.label`
   display: flex;
   flex-direction: column;
@@ -87,27 +93,23 @@ export default function ContactForm() {
               }}
               errors={state.errors}
             />
-            <Label>
-              <input
-                id="name"
-                type="name"
-                name="name"
-                required
-                placeholder="Name"
-              />
-            </Label>
-            <Label>
-              <input
-                id="phone"
-                type="phone"
-                name="phone"
-                required
-                placeholder="Phone"
-              />
-            </Label>
-            <Label>
-              <input id="email" type="email" name="email" placeholder="Email" />
-            </Label>
+            {[
+              ['name', true],
+              ['phone', true],
+              ['email', false]
+            ].map(([name, required]) => {
+              return (
+                <Label key={name}>
+                  <input
+                    id={name}
+                    type={name}
+                    name={name}
+                    required={required}
+                    placeholder={toTitleCase(name)}
+                  />
+                </Label>
+              )
+            })}
             <Label>
               <textarea
                 rows="4"
