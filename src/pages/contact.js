@@ -10,28 +10,32 @@ import { BtnPrimary } from '../components/Buttons'
 
 const Links = styled(Link)`
   color: ${(props) => props.theme.accentDark};
-  text-decoration: underline;
+  text-decoration: underline !important;
+  text-underline-offset: 0.05em;
+`
+const A = styled.a`
+  color: ${(props) => props.theme.accentDark};
+  text-decoration: underline !important;
+  text-underline-offset: 0.05em;
 `
 
 const Label = styled.label`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   font-size: 1.2rem;
   max-width: 450px;
-
   input,
   textarea {
     font-family: Roboto, sans-serif;
     font-size: 1.2rem;
-    border-radius: 8px;
-    padding: 10px 10px;
+    border-radius: 12px;
+    padding: 15px 15px;
     border: 1px solid #ccc;
   }
   *::placeholder {
     font-size: 1.2rem;
     color: #777;
-    font-style: italic;
   }
 `
 
@@ -43,11 +47,12 @@ export default function ContactForm() {
         <Bg>
           <SectionText heading={'Success!'}>
             <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
-              Thanks for contacting Midway Driving Schools. We will get back to
-              you as soon as possible.
+              Thank you for contacting Midway Driving School. We will get back
+              to you as soon as possible.
               <br />
               While you're waiting take a peak at our{' '}
-              <Links to="/#faq">Frequently Asked questions</Links>
+              <Links to="/#faq">frequently asked questions</Links> or give us a
+              call at <A href="tel:612-623-4142">(612) 623-4142</A>
             </p>
           </SectionText>
         </Bg>
@@ -78,7 +83,6 @@ export default function ContactForm() {
                 color: '#b50c0c',
                 borderRadius: '10px',
                 background: 'rgba(255,0,0,.05)',
-                // border: '1px solid #b50c0c',
                 display: 'inline-block'
               }}
               errors={state.errors}
@@ -102,19 +106,8 @@ export default function ContactForm() {
               />
             </Label>
             <Label>
-              <input id="email" type="email" placeholder="Email" />
+              <input id="email" type="email" name="email" placeholder="Email" />
             </Label>
-            <ValidationError
-              prefix="Email"
-              name="email"
-              field="email"
-              errors={state.errors}
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
             <Label>
               <textarea
                 rows="4"
@@ -124,11 +117,6 @@ export default function ContactForm() {
                 placeholder="Hi! I have a question about..."
               />
             </Label>
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
             <BtnPrimary type="submit" disabled={state.submitting}>
               Submit
             </BtnPrimary>

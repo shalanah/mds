@@ -4,10 +4,11 @@ export const BtnPrimary = styled.button`
   white-space: no-wrap;
   color: #fff;
   transition: 0.2s;
-  background-color: ${props => props.theme.accentDark};
+  background-color: ${(props) => props.theme.accentDark};
   padding: 9px 20px 9px 20px;
   box-shadow: none;
   border-radius: 5px;
+  cursor: pointer;
   outline: none;
   border: none;
   font-size: 1.125rem;
@@ -16,7 +17,7 @@ export const BtnPrimary = styled.button`
   text-align: center;
   :hover {
     color: #fff;
-    background-color: ${props => props.theme.accentDarker};
+    background-color: ${(props) => props.theme.accentDarker};
     /* box-shadow: 0px 1px 5px rgba(0,0,0,.3); */
   }
   :hover:after {
@@ -31,13 +32,13 @@ export const BtnPrimary2 = styled(BtnPrimary)`
 
 export const BtnSecondary = styled.button`
   white-space: no-wrap;
-  color: ${props => props.theme.accentDark};
+  color: ${(props) => props.theme.accentDark};
   transition: 0.2s;
   outline: none;
   border: none;
   font-weight: 400;
   display: inline-block;
   :hover {
-    color: ${props => props.theme.accentDarker};
+    color: ${(props) => props.theme.accentDarker};
   }
 `

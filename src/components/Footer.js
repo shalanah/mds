@@ -180,7 +180,7 @@ export default () => {
                 </Col1>
                 <Col2 />
                 <Col3>
-                  <h2>Phone</h2>
+                  <h2>Contact Phone</h2>
                   <FlexToBlock as={'ul'}>
                     <SubColumns as={'li'}>
                       Twin Cities
@@ -199,15 +199,14 @@ export default () => {
                     </SubColumns>
                   </FlexToBlock>
                   <Pad />
-                  <h2>Contact Us</h2>
+                  <h2>Contact Form</h2>
                   <Link
                     to="/contact"
                     style={{
                       cursor: 'pointer',
-                      textDecoration: 'underline',
                       textUnderlineOffset: '.2em'
                     }}>
-                    Click here to send MDS a message
+                    Click here to send a message →
                   </Link>
                   <Pad />
                   <FlexToBlock>
