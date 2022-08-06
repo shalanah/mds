@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { useForm, ValidationError } from '@formspree/react'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
@@ -17,6 +17,20 @@ const A = styled.a`
   color: ${(props) => props.theme.accentDark};
   text-decoration: underline !important;
   text-underline-offset: 0.05em;
+`
+
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+   opacity: 1;
+   transform: translateY(0px);
+  }
+`
+const FadeUp = styled.div`
+  animation: ${fadeUp} 0.5s ease-in-out;
 `
 
 const toTitleCase = (str) => {
@@ -51,16 +65,20 @@ export default function ContactForm() {
     return (
       <Layout>
         <Bg>
-          <SectionText heading={'Success!'}>
-            <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
-              Thank you for contacting Midway Driving School. We will get back
-              to you as soon as possible.
-              <br />
-              While you're waiting take a peak at our{' '}
-              <Links to="/#faq">frequently asked questions</Links> or give us a
-              call at <A href="tel:612-623-4142">(612) 623-4142</A>.
-            </p>
-          </SectionText>
+          <FadeUp>
+            <SectionText heading={'Success!'}>
+              <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
+                Thank you for contacting Midway Driving School.
+                <br />
+                We will get back to you as soon as possible.
+                <br />
+                <br />
+                While you're waiting take a peak at our{' '}
+                <Links to="/#faq">frequently asked questions</Links> or give us
+                a call at <A href="tel:612-623-4142">(612) 623-4142</A>.
+              </p>
+            </SectionText>
+          </FadeUp>
         </Bg>
       </Layout>
     )
