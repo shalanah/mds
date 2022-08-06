@@ -52,7 +52,7 @@ export default function ContactForm() {
               <br />
               While you're waiting take a peak at our{' '}
               <Links to="/#faq">frequently asked questions</Links> or give us a
-              call at <A href="tel:612-623-4142">(612) 623-4142</A>
+              call at <A href="tel:612-623-4142">(612) 623-4142</A>.
             </p>
           </SectionText>
         </Bg>
