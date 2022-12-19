@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import 'intersection-observer'
 import styled from 'styled-components'
 import { Section } from './Section'
@@ -7,6 +7,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import horizontalLogo from '../assets/midway-driving-school-logo-horizontal.png'
 import Hamburger from './Hamburger'
+import BackgroundImage from 'gatsby-background-image'
 
 const Container = styled(Section)`
   height: 150px;
@@ -178,13 +179,13 @@ const WebNav = () => {
   )
 }
 
-const MobileNav = () => {
+const MobileNav = ({ data }) => {
   const [openMenu, setOpenMenu] = useState(false)
   return (
     <MobileContainer as={'header'} className={'mobile'}>
       <div style={{ padding: '0px 20px', height: '100%', background: '#fff' }}>
         <div style={{ height: '100%', width: '100%', position: 'relative' }}>
-          <MainLogo />
+          <MainLogo data={data} />
           <Nav className={'mobile pos-center-vert'}>
             <ul>
               <li style={{ marginRight: '13px' }}>
@@ -236,55 +237,78 @@ const MobileNav = () => {
   )
 }
 
-const MainLogo = () => {
+const MainLogo = ({ data }) => {
   return (
     <LogoContainer className={'pos-center-vert'}>
       <Link
         className={'pos-full'}
         to={'/'}
         title={'Midway Driving School Homepage'}>
-        <StaticQuery
-          query={graphql`
-            query {
-              file(relativePath: { eq: "midway-driving-school-logo.png" }) {
-                childImageSharp {
-                  fluid(maxWidth: 104) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          `}
-          render={(data) => (
-            <Img
-              className={'pos-full'}
-              fluid={data.file.childImageSharp.fluid}
-              alt={'Midway Driving School'}
-            />
-          )}
+        <Img
+          className={'pos-full'}
+          fluid={data.logo.childImageSharp.fluid}
+          alt={'Midway Driving School'}
         />
       </Link>
     </LogoContainer>
   )
 }
 
-const COVIDBanner = styled.div`
+const Banner = styled(BackgroundImage)`
   display: flex;
-  min-height: 45px;
+  min-height: 60px;
   padding: 10px;
   line-height: 1.15;
-
-  background: green;
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
   position: relative;
   z-index: 10000;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-position: 0 0;
+  > div {
+    display: flex;
+    align-items: center;
+    padding-left: ${(props) =>
+      props.anchor
+        ? `calc(${props.theme.pad} * 6) ${props.theme.pad}`
+        : `calc(${props.theme.pad} * 4) ${props.theme.pad}`};
+    padding-right: ${(props) =>
+      props.anchor
+        ? `calc(${props.theme.pad} * 6) ${props.theme.pad}`
+        : `calc(${props.theme.pad} * 4) ${props.theme.pad}`};
+  }
+  span {
+    font-size: 18px;
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
+  }
 `
 
 export default ({}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: { eq: "midway-driving-school-logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 104) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      bg: file(relativePath: { eq: "holiday-bg-6.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   const navId = 'web-nav'
+
   const [isSticky, setIsSticky] = useState(false) // actually get the position FIRST!
   useEffect(() => {
     let elem = document.getElementById(navId)
@@ -310,31 +334,50 @@ export default ({}) => {
   }, [isSticky, setIsSticky])
   return (
     <>
-      <COVIDBanner>
-        <span
+      <Banner fluid={data.bg.childImageSharp.fluid} backgroundColor={'yellow'}>
+        <div
           style={{
-            textAlign: 'center',
-            flex: '0 0 120px',
-            padding: '8px 10px',
-            background: '#fff',
-            color: '#000',
-            marginRight: '10px',
-            borderRadius: '5px',
-            fontWeight: 'bold'
+            width: 'min(1200px, 100%)',
+            margin: '0 auto'
           }}>
-          COVID Update
-        </span>
-        <span style={{ textAlign: 'left' }}>
-          Open and booking lessons! Staff is fully vaccinated.
-        </span>
-      </COVIDBanner>
+          <span
+            style={{
+              textAlign: 'center',
+              padding: '8px 10px',
+              background: '#fff',
+              color: '#000',
+              marginRight: '4px',
+              borderRadius: '5px',
+              fontWeight: 'bold',
+              whiteSpace: 'nowrap'
+            }}>
+            Holiday Hours
+          </span>
+          <span
+            style={{
+              lineHeight: '1.4',
+              textAlign: 'left',
+              padding: '5px 10px',
+              borderRadius: '4px'
+            }}>
+            <span style={{ whiteSpace: 'nowrap', marginRight: 5 }}>
+              <u style={{ textUnderlineOffset: '.3em' }}>
+                <strong>Office Closed Dec 24-28th</strong>
+              </u>
+            </span>{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>
+              Lessons available Dec 26-28th.
+            </span>
+          </span>
+        </div>
+      </Banner>
       {/* Mobile */}
-      <MobileNav />
+      <MobileNav data={data} />
       {/* Web */}
       <Container as={'header'} className={'mobile-none'} id={navId}>
         <div className={'pos-full'} style={{ position: 'relative' }}>
-          <MainLogo />
-          <MobileNav />
+          <MainLogo data={data} />
+          <MobileNav data={data} />
           <Nav className={'mobile-none pos-center-vert'}>
             <WebNav />
           </Nav>
