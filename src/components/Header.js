@@ -334,7 +334,7 @@ export default ({}) => {
   }, [isSticky, setIsSticky])
   return (
     <>
-      <Banner fluid={data.bg.childImageSharp.fluid} backgroundColor={'yellow'}>
+      <Banner fluid={data.bg.childImageSharp.fluid}>
         <div
           style={{
             width: 'min(1200px, 100%)',
