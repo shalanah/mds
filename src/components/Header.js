@@ -334,7 +334,7 @@ export default ({}) => {
   }, [isSticky, setIsSticky])
   return (
     <>
-      <Banner fluid={data.bg.childImageSharp.fluid}>
+      {/* <Banner fluid={data.bg.childImageSharp.fluid}>
         <div
           style={{
             width: 'min(1200px, 100%)',
@@ -370,7 +370,7 @@ export default ({}) => {
             </span>
           </span>
         </div>
-      </Banner>
+      </Banner> */}
       {/* Mobile */}
       <MobileNav data={data} />
       {/* Web */}
