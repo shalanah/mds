@@ -42,7 +42,8 @@ const list = [
   'Private Lessons',
   'Free Pickup Service',
   'Single Lessons or Discount Packages',
-  'Behind-the-Wheel Training', //   'Cars Available for MN License Road Test',
+  // 'Behind-the-Wheel Training', // Alternate text when the we don't allow for license road tests lessons
+  'Cars Available for MN License Road Test',
   'ESL Experts'
 ]
 
