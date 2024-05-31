@@ -107,29 +107,6 @@ const Container = styled.div`
 
 const rates = {
   main: [
-    { elem: '2 Hour Lessons', price: '$225.00' },
-    { elem: '6 Hour Behind the Wheel Package', price: '$645.00' },
-    { elem: '7½ Hour Package including Road Test', price: '$795.00' },
-    {
-      elem: (
-        <div>
-          <div style={{ marginBottom: '.5rem' }}>
-            3&#189; Hour Road Test Appointment*
-          </div>
-          <div className="note">
-            <strong>
-              <em>
-                *Students must take at least one lesson before scheduling a Road
-                Test Appointment.
-              </em>
-            </strong>
-          </div>
-        </div>
-      ),
-      price: '$375.00'
-    }
-  ],
-  outer: [
     { elem: '2 Hour Lessons', price: '$235.00' },
     { elem: '6 Hour Behind the Wheel Package', price: '$675.00' },
     { elem: '7½ Hour Package including Road Test', price: '$825.00' },
@@ -149,7 +126,30 @@ const rates = {
           </div>
         </div>
       ),
-      price: '$385.00'
+      price: '$405.00'
+    }
+  ],
+  outer: [
+    { elem: '2 Hour Lessons', price: '$245.00' },
+    { elem: '6 Hour Behind the Wheel Package', price: '$705.00' },
+    { elem: '7½ Hour Package including Road Test', price: '$855.00' },
+    {
+      elem: (
+        <div>
+          <div style={{ marginBottom: '.5rem' }}>
+            3&#189; Hour Road Test Appointment*
+          </div>
+          <div className="note">
+            <strong>
+              <em>
+                *Students must take at least one lesson before scheduling a Road
+                Test Appointment.
+              </em>
+            </strong>
+          </div>
+        </div>
+      ),
+      price: '$415.00'
     }
   ]
 }
